@@ -16,5 +16,7 @@ To report any behavior that does not comply with this code of conduct, please co
 
 > [!IMPORTANT]
 > [Contributions](CONTRIBUTING.md): Get details about our code of conduct and the process for submitting pull requests.
+>
 > [Changelog](CHANGELOG.md): Record of all important changes to the project.
+>
 > [Dependencies](DEPENDENCIES.md): List and description of project dependencies.

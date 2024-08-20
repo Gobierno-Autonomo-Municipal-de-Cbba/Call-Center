@@ -34,6 +34,7 @@
 
 ## Use
 Access the user interface in your browser and follow the instructions to register or follow up a claim.
+
 ...
 
 > [!IMPORTANT]
