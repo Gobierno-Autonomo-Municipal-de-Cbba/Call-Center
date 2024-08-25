@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
   templateUrl: './citizen-tray.component.html',
   styleUrl: './citizen-tray.component.css'
 })
-export class CitizenTrayComponent {
+export default class CitizenTrayComponent {
 
 }

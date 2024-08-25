@@ -6,11 +6,11 @@
 echo "Installing dependencies..."
 
 # Installing dependencies for the frontend (Angular)
-cd web\ system/frontend
+cd web\ ui
 npm install
 
 # Installing dependencies for the backend (Nestjs & Node.js)
-cd ../backend
+cd ../api/CallCenterAPI
 npm install
 
 echo "Complete configuration."

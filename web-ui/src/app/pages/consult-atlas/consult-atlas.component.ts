@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
   templateUrl: './consult-atlas.component.html',
   styleUrl: './consult-atlas.component.css'
 })
-export class ConsultAtlasComponent {
+export default class ConsultAtlasComponent {
 
 }
