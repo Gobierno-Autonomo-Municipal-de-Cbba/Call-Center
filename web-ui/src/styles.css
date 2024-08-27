@@ -1,1 +1,100 @@
-/* You can add global styles to this file, and also import other style files */
+.headline {
+  font-family: "Secular One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 60px;
+  line-height: 72px;
+  letter-spacing: -0.02em;
+}
+
+.title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 30px;
+  line-height: 36px;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0em;
+}
+
+.text {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0em;
+}
+
+.subtext {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.05em;
+}
+
+.orange-web {
+  background-color: #FFAE00;
+}
+
+.honolulu-blue {
+  background-color: #1779BA;
+}
+
+.malachite {
+  background-color: #3ADB76;
+}
+
+.keppel {
+  background-color: #4FB9A8;
+}
+
+.aero {
+  background-color: #4AC1E0;
+}
+
+.blash {
+  background-color: #EA547C;
+}
+
+.hunyadi-yellow {
+  background-color: #F9B154;
+}
+
+.amaranth-purple {
+  background-color: #AE1857;
+}
+
+.seasalt {
+  background-color: #F8F8F8;
+}
+
+.white {
+  background-color: #FFFFFF;
+}
+
+.platinum {
+  background-color: #DEDEDE;
+}
+
+.black {
+  background-color: #000000;
+}
+
+.cool-gray {
+  background-color: #8c92a380;
+}
+
+.semi-black {
+  background-color: #00000080;
+}

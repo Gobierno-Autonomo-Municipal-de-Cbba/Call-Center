@@ -1,5 +1,3 @@
-# Configuration file that specifies specific attributes for files in the repository, such as end-of-line handling, binaries, etc.
-
 *.md text
 *.sh eol=lf
 *.php text
