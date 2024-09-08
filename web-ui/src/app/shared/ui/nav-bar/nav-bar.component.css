@@ -2,6 +2,7 @@
   background-color: var(--aero);
   height: 120px;
   width: 100vw;
+  margin-bottom: 60px;
   cursor: context-menu;
 }
 
@@ -66,10 +67,6 @@
   color: var(--semi-black2);
 }
 
-.line-underline {
-  border-bottom: 5px solid var(--white);
-}
-
 .submenu {
   position: absolute;
   z-index: 1;
@@ -78,11 +75,11 @@
   height: auto;
   border: solid 1px var(--white);
   border-radius: 0% 5% 5% 5%;
+  cursor: pointer;
 }
 
 .submenu-item {
   display: flex;
-  text-decoration: none;
   color: var(--white);
   padding: 10px 5px;
 }
@@ -208,4 +205,8 @@
 
 .p-button.active .left-icon {
   filter: invert(1);
+}
+
+.line-underline {
+  border-bottom: 5px solid var(--white);
 }
