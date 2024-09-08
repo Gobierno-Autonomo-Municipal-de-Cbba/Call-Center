@@ -5,5 +5,7 @@
 
 > [!NOTE]
 > [Design Guide](design-guide.md): Details about the UI/UX design made with Figma.
+>
 > [System Architecture](architecture.md): Description of the system architecture.
+>
 > [Technical Manual](technical-manual.md): Detailed instructions on how to use the system and information for developers who wish to contribute to the system.

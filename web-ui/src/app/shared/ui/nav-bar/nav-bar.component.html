@@ -1,0 +1,122 @@
+<nav class="nav-bar-style">
+  <div class="nav-bar-columns">
+    <div class="logo-text">
+      <div class="headline headline-style">Cocha</div>
+      <div class="title title-style">somos <br /> innovación</div>
+    </div>
+
+    <div class="grid-container">
+      <div class="grid-item">
+        <b class="subtitle">Menú</b>
+      </div>
+
+      <div class="grid-item">
+        <a (click)="toggleSubmenu('cases')" class="subtitle p-button" [ngClass]="{ 'active': activeSubmenu === 'cases' }">
+          <span class="button-icons">
+            <span class="icon-cases left-icon"></span>
+              Casos
+            <span class="pi pi-sort-down-fill right-icon"></span>
+          </span>
+        </a>
+        <div *ngIf="activeSubmenu === 'cases'" class="text submenu">
+          <a *ngFor="let item of casesItems" [routerLink]="item.route" class="submenu-item">
+            <span class="{{item.icon}}"></span>
+            {{item.label}}
+          </a>
+        </div>
+      </div>
+
+      <div class="grid-item">
+        <a (click)="navigateTo('/consulta-atlas')" class="subtitle p-button">
+          <span class="button-icons">
+            <span class="icon-consult-atlas left-icon"></span>
+            Consulta Atlas
+          </span>
+        </a>
+      </div>
+
+      <div class="grid-item">
+        <a (click)="navigateTo('/reporte-general')" class="subtitle p-button">
+          <span class="button-icons line-underline">
+            <span class="icon-report-general left-icon"></span>
+            Reporte General
+          </span>
+        </a>
+      </div>
+
+      <div class="grid-item">
+        <a (click)="toggleSubmenu('questionsFrecuently')" class="subtitle p-button" [ngClass]="{ 'active': activeSubmenu === 'questionsFrecuently' }">
+          <span class="button-icons">
+            <span class="icon-questions-frecuently left-icon"></span>
+              Preguntas Frecuentes
+            <span class="pi pi-sort-down-fill right-icon"></span>
+          </span>
+        </a>
+        <div *ngIf="activeSubmenu === 'questionsFrecuently'" class="text submenu">
+          <a *ngFor="let item of questionsFrecuentlyItems" [routerLink]="item.route" class="submenu-item">
+            <span class="{{item.icon}}"></span>
+            {{item.label}}
+          </a>
+        </div>
+      </div>
+
+      <div class="grid-item">
+        <a (click)="toggleSubmenu('whatsapp')" class="subtitle p-button" [ngClass]="{ 'active': activeSubmenu === 'whatsapp'}">
+          <span class="button-icons">
+            <span class="icon-whatsapp left-icon"></span>
+              Whatsapp
+            <span class="pi pi-sort-down-fill right-icon"></span>
+          </span>
+        </a>
+        <div *ngIf="activeSubmenu === 'whatsapp'" class="text submenu">
+          <a *ngFor="let item of whatsappItems" [routerLink]="item.route" class="submenu-item">
+            <span class="{{item.icon}}"></span>
+            {{item.label}}
+          </a>
+        </div>
+      </div>
+
+      <div class="grid-item">
+        <a (click)="toggleSubmenu('denunciations')" class="subtitle p-button" [ngClass]="{ 'active': activeSubmenu === 'denunciations' }">
+          <span class="button-icons">
+            <span class="icon-denunciations left-icon"></span>
+              Denuncias
+            <span class="pi pi-sort-down-fill right-icon"></span>
+          </span>
+        </a>
+        <div *ngIf="activeSubmenu === 'denunciations'" class="text submenu">
+          <a *ngFor="let item of denunciationsItems" [routerLink]="item.route" class="submenu-item">
+            <span class="{{item.icon}}"></span>
+            {{item.label}}
+          </a>
+        </div>
+      </div>
+
+      <div class="grid-item">
+        <a (click)="navigateTo('/bandeja-ciudadano')" class="subtitle p-button">
+          <span class="button-icons">
+            <span class="icon-tray-citizen left-icon"></span>
+            Bandeja Ciudadano
+          </span>
+        </a>
+      </div>
+
+      <div class="grid-item">
+        <a (click)="toggleSubmenu('profile')" class="subtitle p-button" [ngClass]="{ 'active': activeSubmenu === 'profile' }">
+          <span class="button-icons">
+            <span class="icon-profile left-icon"></span>
+              Perfil
+            <span class="pi pi-sort-down-fill right-icon"></span>
+          </span>
+        </a>
+        <div *ngIf="activeSubmenu === 'profile'" class="text submenu">
+          <a *ngFor="let item of profileItems" [routerLink]="item.route" class="submenu-item">
+            <span class="{{item.icon}}"></span>
+            {{item.label}}
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</nav>

@@ -11,7 +11,7 @@
 
 ## Backend
 - NestJS: ^10
-- Node.js: ^20.12
+- Node.js: ^20.17.0
 
 ## Database
 - PostgreSQL: ^16.4

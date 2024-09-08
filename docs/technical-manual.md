@@ -18,7 +18,7 @@
 - **Database**: PostgreSQL
 
 ## Project Structure
-- `web app`: Contains the main source code.
+- `web system`: Contains the main source code.
 
 ## How to Contribute
 1. Clone the repository.
@@ -28,4 +28,5 @@
 
 > [!TIP]
 > [System Documentation](https://docs.google.com/document/d/1xYB9gWu4-Nz-TDiFQ9ffGd6L1mD3Zv7f/edit?usp=drive_link&ouid=101090272387193010258&rtpof=true&sd=true)
-> [Project Report](https://docs.google.com/document/d/1uij8JF2GuRsUAWxIK7Cg6UMFjPfOhDX7/edit?usp=drive_link&ouid=101090272387193010258&rtpof=true&sd=true)
+>
+> [Project Documentation](https://docs.google.com/document/d/1uij8JF2GuRsUAWxIK7Cg6UMFjPfOhDX7/edit?usp=drive_link&ouid=101090272387193010258&rtpof=true&sd=true)
