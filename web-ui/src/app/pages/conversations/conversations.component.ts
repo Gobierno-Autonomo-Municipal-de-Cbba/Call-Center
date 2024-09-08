@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { NavBarComponent } from '@shared/ui/nav-bar/nav-bar.component'
 
 @Component({
-  selector: 'app-general-report',
+  selector: 'app-conversations',
   standalone: true,
   imports: [NavBarComponent],
-  templateUrl: './general-report.component.html',
-  styleUrl: './general-report.component.css'
+  templateUrl: './conversations.component.html',
+  styleUrl: './conversations.component.css'
 })
-export default class GeneralReportComponent {
+export default class ConversationsComponent {
 
 }
