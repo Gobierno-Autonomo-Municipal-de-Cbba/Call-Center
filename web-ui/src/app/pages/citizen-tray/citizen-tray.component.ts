@@ -10,5 +10,5 @@ import { FooterComponent } from '@shared/ui/footer/footer.component';
   styleUrl: './citizen-tray.component.css'
 })
 export default class CitizenTrayComponent {
-
+  
 }

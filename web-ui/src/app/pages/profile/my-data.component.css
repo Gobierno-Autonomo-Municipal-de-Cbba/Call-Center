@@ -1,0 +1,42 @@
+::ng-deep app-tag p-tag .p-tag {
+  background-color: var(--hunyadi-yellow);
+  width: 950px;
+}
+
+.center-text {
+  text-align: center;
+}
+
+.container-tag {
+  text-align: center;
+  margin-bottom: 74px;
+}
+
+.container-table {
+  display: flex;
+  justify-content: center;
+  width: auto;
+}
+
+.container-table td {
+  border: 0.5px solid var(--platinum);
+  padding: 10px 15px;
+}
+
+.container-table p-table {
+  border-radius: 1%;
+  overflow: hidden;
+}
+
+.name-style {
+  font-size: 16px;
+  font-weight: bolder;
+}
+
+.row-pair {
+  background-color: var(--seasalt);
+}
+
+.row-odd {
+  background-color: var(--cool-gray);
+}
