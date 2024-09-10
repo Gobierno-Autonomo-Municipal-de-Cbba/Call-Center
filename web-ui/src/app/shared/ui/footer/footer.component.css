@@ -1,9 +1,9 @@
-.footer-container {
+div {
   text-align: center;
 }
 
-.footer-image {
+img {
   width: 40%;
   height: auto;
-  margin: 60px 0px;
+  margin: 50px 0px;
 }

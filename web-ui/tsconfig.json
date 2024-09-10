@@ -5,10 +5,12 @@
     "paths": {
       "@assets/*": ["app/assets/*"],
       "@auth/*": ["app/auth/*"],
-      "@core/*": ["app/core/*"],
-      "@pages/*": ["app/pages/*"],
-      "@shared/*": ["app/shared/*"],
       "@components/*": ["app/components/*"],
+      "@core/*": ["app/core/*"],
+      "@domain/*": ["app/domain/*"],
+      "@pages/*": ["app/pages/*"],
+      "@service/*": ["app/service/*"],
+      "@shared/*": ["app/shared/*"],
       //
       "@environments/*": ["environments"]
     },

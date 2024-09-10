@@ -3,6 +3,7 @@
 @import "primeicons/primeicons.css";
 
 :root {
+  /* COLORS */
   --white: #FFFFFF;
   --seasalt: #F8F8F8;
   --platinum: #DEDEDE;
@@ -20,6 +21,9 @@
   --keppel: #4FB9A8;
   --hunyadi-yellow: #F9B154;
   --amaranth-purple: #AE1857;
+
+  /* ... */
+
 }
 
 * {
@@ -29,7 +33,7 @@
 }
 
 html, body {
-  height: 100%;
+  height: auto;
   overflow-x: hidden;
 }
 
@@ -37,7 +41,7 @@ div {
   height: 100%;
 }
 
-.headline {
+.typography-headline {
   font-family: "Secular One", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -47,7 +51,7 @@ div {
   color: var(--white);
 }
 
-.title {
+.typography-title {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-style: normal;
@@ -57,7 +61,7 @@ div {
   color: var(--white);
 }
 
-.subtitle {
+.typography-subtitle {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-style: normal;
@@ -67,21 +71,21 @@ div {
   color: var(--white);
 }
 
-.text {
+.typography-text {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 24px;
   letter-spacing: 0em;
   color: var(--black);
 }
 
-.subtext {
+.typography-subtext {
   font-family: "Cormorant Garamond", serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.05em;
   color: var(--black);
