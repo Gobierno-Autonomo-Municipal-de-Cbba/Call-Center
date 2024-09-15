@@ -1,6 +1,7 @@
 ::ng-deep app-tag p-tag .p-tag {
   background-color: var(--hunyadi-yellow);
   width: 950px;
+  padding: 20px 100px;
 }
 
 .center-text {

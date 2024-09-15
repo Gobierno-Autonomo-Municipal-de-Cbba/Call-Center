@@ -1,6 +1,6 @@
 # Project Dependencies
 
-| <img src="./assets/images/logo-dependencies.png" alt="Logo" width="300" style="border-radius: 15px;"/> | **List of system dependencies and their versions.** |
+| <img src="/web-ui/src/assets/readme/logo-dependencies.png" alt="Logo" width="300" style="border-radius: 15px;"/> | **List of system dependencies and their versions.** |
 |------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 ## IDE

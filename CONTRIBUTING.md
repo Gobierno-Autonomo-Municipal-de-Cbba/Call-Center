@@ -1,6 +1,6 @@
 # Contributing Guide
 
-| <img src="./assets/images/logo-contribution.png" alt="Logo" width="300" style="border-radius: 15px;"/> | **Instructions for contributing to the system. Includes guides on how to report bugs, suggest improvements, and submit pull requests.** |
+| <img src="/web-ui/src/assets/readme/logo-contribution.png" alt="Logo" width="300" style="border-radius: 15px;"/> | **Instructions for contributing to the system. Includes guides on how to report bugs, suggest improvements, and submit pull requests.** |
 |------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 ## How to Contribute

@@ -1,6 +1,6 @@
 # Pull Request Template
 
-| <img src="../assets/images/logo-request.jpeg" alt="Logo" width="300" style="border-radius: 15px;"/> | **Templates for pull requests on GitHub. This helps contributors provide all the necessary information when submitting changes.** |
+| <img src="/web-ui/src/assets/readme/logo-request.jpeg" alt="Logo" width="300" style="border-radius: 15px;"/> | **Templates for pull requests on GitHub. This helps contributors provide all the necessary information when submitting changes.** |
 |------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 ## Description

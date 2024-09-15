@@ -1,6 +1,6 @@
 # Code of Conduct
 
-| <img src="./assets/images/logo-code-Conduct.png" alt="Logo" width="300" style="border-radius: 15px;"/> | **Defines the standards of behavior expected from system collaborators. It is helpful in maintaining a positive contribution environment.** |
+| <img src="/web-ui/src/assets/readme/logo-code-Conduct.png" alt="Logo" width="300" style="border-radius: 15px;"/> | **Defines the standards of behavior expected from system collaborators. It is helpful in maintaining a positive contribution environment.** |
 |------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 ## Our Commitment

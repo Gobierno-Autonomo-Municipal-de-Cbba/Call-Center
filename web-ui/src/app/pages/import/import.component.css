@@ -1,0 +1,25 @@
+::ng-deep app-tag p-tag .p-tag {
+  background-color: var(--keppel);
+  width: 1595px;
+  height: 68px;
+  padding: 20px 20px;
+}
+
+.icon-list {
+  background-image: url('/assets-app/table-list-solid.svg');
+  background-repeat: no-repeat;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 35px;
+  filter: invert(100%) brightness(100%);
+}
+
+.container-tag {
+  text-align: center;
+  margin-bottom: 96px;
+}
+
+.container-body {
+  text-align: center;
+  margin-bottom: 18px;
+}
