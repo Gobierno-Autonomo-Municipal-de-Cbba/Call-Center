@@ -1,4 +1,9 @@
-export interface Profile {
+export interface ProfileField {
+  label: string;
+  key: string;
+}
+
+export interface ProfileData {
   id?: string;
   name?: string;
   ci?: number;

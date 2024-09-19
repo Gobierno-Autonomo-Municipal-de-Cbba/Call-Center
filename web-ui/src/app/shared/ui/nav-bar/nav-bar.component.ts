@@ -1,8 +1,8 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule, Router } from '@angular/router';
+
 import { ButtonModule } from 'primeng/button';
-import { RouterModule } from '@angular/router';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-nav-bar',
@@ -12,8 +12,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./nav-bar.component.css']
 })
 export class NavBarComponent {
-  activeSubmenu: string | null = null;
   constructor(private router: Router) {}
+
+  activeSubmenu: string | null = null;
+  @Input() marginBottom: string = '60px';
 
   menus = [
     { id: 'cases', label: 'Casos', icon: 'icon-cases', submenu: true, items: [

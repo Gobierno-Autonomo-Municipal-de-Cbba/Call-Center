@@ -6,7 +6,6 @@
   line-height: 24px;
   letter-spacing: 0em;
   color: var(--black);
-
   margin-top: 40px;
   text-align: left;
 }
@@ -19,7 +18,6 @@
   line-height: 28px;
   letter-spacing: 0em;
   color: var(--white);
-
   background-color: var(--keppel);
   border: none;
   width: 465px;
@@ -27,6 +25,7 @@
   border-bottom: var(--blash) solid 4px;
   border-radius: 10rem;
   margin-bottom: 18px;
+  box-shadow: none;
 }
 
 ::ng-deep .p-button.p-fileupload-choose:hover {
@@ -50,11 +49,13 @@
   height: 55px;
   border-bottom: var(--blash) solid 4px;
   justify-content: center;
+  box-shadow: none;
 }
 
 .icon-check {
   background-image: url('/assets-app/check-svgrepo-com.svg');
   background-repeat: no-repeat;
+  background-position: center;
   width: 2rem;
   height: 2rem;
   margin-right: 12px;

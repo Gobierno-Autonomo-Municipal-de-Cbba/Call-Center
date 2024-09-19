@@ -6,9 +6,9 @@
   </section>
 
   <section class="container-table">
-    <p-table [value]="profiles" [tableStyle]="{'width': '827.43px', 'height': '308px'}">
+    <p-table [value]="profileData" [tableStyle]="{'width': '827.43px', 'height': '308px'}">
       <ng-template pTemplate="body" let-profile>
-        <tr *ngFor="let field of displayedFields; let i = index" [ngClass]="{'row-pair': i % 2 === 0, 'row-odd': i % 2 !== 0}">
+        <tr *ngFor="let field of profileField; let i = index" [ngClass]="{'row-pair': i % 2 === 0, 'row-odd': i % 2 !== 0}">
           <td class="typography-text center-text">{{ field.label }}</td>
           <td class="typography-text" [ngClass]="{'name-style': field.key === 'name'}">{{ profile[field.key] }}</td>
         </tr>

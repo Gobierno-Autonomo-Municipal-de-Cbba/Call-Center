@@ -26,18 +26,10 @@
 
 }
 
-*:not(app-upload *) {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 html, body {
-  height: auto;
   overflow-x: hidden;
-}
-
-div:not(app-upload div) {
+  padding: 0;
+  margin: 0;
   height: 100%;
 }
 
@@ -75,7 +67,7 @@ div:not(app-upload div) {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 24px;
   letter-spacing: 0em;
   color: var(--black);
@@ -85,7 +77,7 @@ div:not(app-upload div) {
   font-family: "Cormorant Garamond", serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.05em;
   color: var(--black);

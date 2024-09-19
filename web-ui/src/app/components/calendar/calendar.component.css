@@ -1,0 +1,37 @@
+::ng-deep p-calendar {
+  cursor: not-allowed;
+}
+
+::ng-deep p-calendar .p-inputtext {
+  order: 2;
+  border-radius: 0% 5% 5% 0%;
+  border: 0.5px solid var(--semi-black2);
+  box-shadow: none;
+  pointer-events: none;
+}
+
+::ng-deep p-calendar .p-calendar {
+  margin-top: 7px;
+  height: 41px;
+  width: 234.50px;
+}
+
+::ng-deep .p-calendar-w-btn .p-datepicker-trigger {
+  background-image: url('/assets-app/calendar-svgrepo-com.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1.5rem;
+  border-radius: 10% 0% 0% 10%;
+  background-color: var(--keppel);
+  border: 0.5px solid var(--semi-black2);
+  box-shadow: none;
+}
+
+::ng-deep .p-icon-wrapper {
+  display: none;
+}
+
+.typography-text {
+  color: var(--black);
+  font-weight: bold;
+}

@@ -1,5 +1,24 @@
-<app-nav-bar></app-nav-bar>
+<app-nav-bar [marginBottom]="'30px'"></app-nav-bar>
 
+<main>
+  <section class="container1">
+    <app-calendar [tagText]="'Fecha Inicial'"></app-calendar>
+    <app-calendar [tagText]="'Fecha Final'"></app-calendar>
+    <app-action-button></app-action-button>
+  </section>
 
+  <section>
+    <div class="container2">
+      <div>
+        <app-tag [tagText]="'POR TIPO DE CASOS'"></app-tag>
+        <p-chart type="pie" [data]="pieData" [options]="pieOptions" />
+      </div>
+      <div>
+        <app-tag [tagText]="'POR UNIDAD'"></app-tag>
+        <p-chart class="bar-chart" type="bar" [data]="barData" [options]="barOptions" />
+      </div>
+    </div>
+  </section>
+</main>
 
 <app-footer></app-footer>

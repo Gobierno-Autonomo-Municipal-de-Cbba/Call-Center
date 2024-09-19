@@ -2,17 +2,17 @@
   background-color: var(--aero);
   height: 120px;
   width: 100vw;
-  margin-bottom: 60px;
   cursor: context-menu;
 }
 
 .nav-bar-columns {
   display: flex;
+  height: 100%;
 }
 
 .logo-text {
   display: flex;
-  padding: 15px;
+  padding: 20px;
 }
 
 .headline-style, .title-style {
@@ -20,7 +20,7 @@
 }
 
 .headline-style {
-  padding-right: 15px;
+  padding-right: 12px;
 }
 
 .title-style {
@@ -110,6 +110,7 @@
 .icon-my-data,
 .icon-log-out {
   background-repeat: no-repeat;
+  background-position: center;
   width: 1.5rem;
   height: 1.5rem;
 }
