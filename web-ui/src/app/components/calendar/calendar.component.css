@@ -17,7 +17,7 @@
 }
 
 ::ng-deep .p-calendar-w-btn .p-datepicker-trigger {
-  background-image: url('/assets-app/calendar-svgrepo-com.svg');
+  background-image: url('/assets/app/calendar-svgrepo-com.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 1.5rem;

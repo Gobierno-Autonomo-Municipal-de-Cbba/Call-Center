@@ -1,0 +1,19 @@
+label {
+  display: flex;
+  justify-content: flex-end;
+}
+
+input {
+  background-color: var(--seasalt);
+  border: 0.5px solid var(--semi-black2);
+  box-shadow: none;
+  padding: 0px 15px;
+  height: 45px;
+  width: 523px;
+  cursor: text;
+  padding-right: 40px;
+  background-image: url('/assets/app/search-alt-2-svgrepo-com.svg');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 1.5rem;
+}

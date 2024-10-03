@@ -1,7 +1,6 @@
 import { Component, HostListener, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Router } from '@angular/router';
-
 import { ButtonModule } from 'primeng/button';
 
 @Component({

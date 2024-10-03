@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+
 import { NavBarComponent } from '@shared/ui/nav-bar/nav-bar.component'
 import { FooterComponent } from '@shared/ui/footer/footer.component';
 
@@ -10,5 +11,5 @@ import { FooterComponent } from '@shared/ui/footer/footer.component';
   styleUrl: './citizen-tray.component.css'
 })
 export default class CitizenTrayComponent {
-  
+
 }

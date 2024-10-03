@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 
 @Component({
@@ -10,5 +9,10 @@ import { ButtonModule } from 'primeng/button';
   styleUrl: './action-button.component.css'
 })
 export class ActionButtonComponent {
+  @Input() buttonText: string = '';
+  @Output() onFilter = new EventEmitter<void>();
 
+  handleState() {
+    this.onFilter.emit();
+  }
 }

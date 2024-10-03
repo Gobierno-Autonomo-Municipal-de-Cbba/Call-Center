@@ -6,11 +6,8 @@
       "@auth/*": ["app/auth/*"],
       "@components/*": ["app/components/*"],
       "@core/*": ["app/core/*"],
-      "@domain/*": ["app/domain/*"],
       "@pages/*": ["app/pages/*"],
-      "@service/*": ["app/service/*"],
       "@shared/*": ["app/shared/*"],
-      //
       "@environments/*": ["environments"]
     },
     "outDir": "./dist/out-tsc",

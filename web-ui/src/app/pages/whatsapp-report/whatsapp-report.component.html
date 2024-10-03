@@ -2,9 +2,10 @@
 
 <main>
   <section class="container1">
-    <app-calendar [tagText]="'Fecha Inicial'"></app-calendar>
-    <app-calendar [tagText]="'Fecha Final'"></app-calendar>
-    <app-action-button></app-action-button>
+    <p-toast />
+    <app-calendar #startDate [tagText]="'Fecha Inicial'"></app-calendar>
+    <app-calendar #endDate [tagText]="'Fecha Final'"></app-calendar>
+    <app-action-button [buttonText]="'Filtrar'" (onFilter)="onFilterDates()"></app-action-button>
   </section>
 
   <section>

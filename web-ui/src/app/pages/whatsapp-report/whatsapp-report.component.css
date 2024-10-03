@@ -10,6 +10,35 @@
   width: 1136px;
 }
 
+::ng-deep app-action-button .show-icon {
+  background-image: url('/assets/app/filter-svgrepo-com.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-bottom: 6px;
+}
+
+::ng-deep app-action-button .style-button:hover .show-icon {
+  filter: invert(60%) sepia(76%) saturate(6930%) hue-rotate(176deg) brightness(98%) contrast(102%);
+}
+
+::ng-deep .p-toast-message {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13px;
+  line-height: 24px;
+  letter-spacing: 0em;
+  color: var(--black);
+  margin-top: 40px;
+  text-align: left;
+}
+
+::ng-deep .p-toast-message .p-icon-wrapper {
+  display: block;
+}
+
 .container1 {
   display: flex;
   justify-content: center;

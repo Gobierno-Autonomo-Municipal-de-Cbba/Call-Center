@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-
 import { MessageService } from 'primeng/api';
 import { FileUploadModule } from 'primeng/fileupload';
 import { ToastModule } from 'primeng/toast';
@@ -10,6 +9,7 @@ import { ToastModule } from 'primeng/toast';
   imports: [FileUploadModule, ToastModule],
   templateUrl: './upload.component.html',
   styleUrls: ['./upload.component.css'],
+  providers: [MessageService]
 })
 export class UploadComponent {
   constructor(private messageService: MessageService) {}
@@ -25,7 +25,7 @@ export class UploadComponent {
     } else {
       this.messageService.add({
         severity: 'success',
-        summary: 'Éxito',
+        summary: '¡Éxito!',
         detail: 'Archivo fue cargado.',
         life: 5000
       });

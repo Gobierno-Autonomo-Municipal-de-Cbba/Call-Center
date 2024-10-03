@@ -1,21 +1,12 @@
 import { Injectable } from '@angular/core';
-import { ProfileData, ProfileField } from '@domain/profile.domain';
+import { ProfileData } from '@core/models/profile.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ProfileService {
-  private profileField: ProfileField[] = [
-    { label: 'Nombre Completo', key: 'name' },
-    { label: 'Documento de Identidad', key: 'ci' },
-    { label: 'Cargo', key: 'position' },
-    { label: 'Número de Ítem', key: 'item' },
-    { label: 'Unidad Organizacional', key: 'unit' },
-    { label: 'Correo Municipal', key: 'email' },
-    { label: 'Rol', key: 'role' }
-  ];
-
   private profileData: ProfileData[] = [
+    // API
     {
       id: '1000',
       name: 'TEST TEST',
@@ -27,10 +18,6 @@ export class ProfileService {
       role: 'CALLCENTER'
     }
   ];
-
-  public getProfileField(): ProfileField[] {
-    return this.profileField;
-  }
 
   public getProfileData(): ProfileData[] {
     return this.profileData;
