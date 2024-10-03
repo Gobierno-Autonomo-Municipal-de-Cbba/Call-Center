@@ -2,12 +2,11 @@
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-style: normal;
-  font-size: 20px;
+  font-size: 19px;
   line-height: 28px;
   letter-spacing: 0.3em;
   color: var(--white);
 
-  padding: 20px 100px;
   border-radius: 0%;
   justify-content: flex-start;
   cursor: context-menu;

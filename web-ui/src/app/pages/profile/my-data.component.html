@@ -1,21 +1,19 @@
 <app-nav-bar></app-nav-bar>
 
 <main>
-  <section>
-    <div class="container-tag">
-      <app-tag [tagText]="'MIS DATOS'"></app-tag>
-    </div>
+  <section class="container-tag">
+    <app-tag [tagText]="'MIS DATOS'"></app-tag>
+  </section>
 
-    <div class="container-table">
-      <p-table [value]="profiles" [tableStyle]="{'width': '827.43px', 'height': '308px'}">
-        <ng-template pTemplate="body" let-profile>
-          <tr *ngFor="let field of displayedFields; let i = index" [ngClass]="{'row-pair': i % 2 === 0, 'row-odd': i % 2 !== 0}">
-            <td class="typography-text center-text">{{ field.label }}</td>
-            <td class="typography-text" [ngClass]="{'name-style': field.key === 'name'}">{{ profile[field.key] }}</td>
-          </tr>
-        </ng-template>
-      </p-table>
-    </div>
+  <section class="container-table">
+    <p-table [value]="profileData" [tableStyle]="{'width': '827.43px', 'height': '308px'}">
+      <ng-template pTemplate="body" let-profile>
+        <tr *ngFor="let field of profileField; let i = index" [ngClass]="{'row-pair': i % 2 === 0, 'row-odd': i % 2 !== 0}">
+          <td class="typography-text center-text">{{ field.label }}</td>
+          <td class="typography-text" [ngClass]="{'name-style': field.key === 'name'}">{{ profile[field.key] }}</td>
+        </tr>
+      </ng-template>
+    </p-table>
   </section>
 </main>
 

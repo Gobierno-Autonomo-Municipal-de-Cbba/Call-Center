@@ -1,5 +1,94 @@
 <app-nav-bar></app-nav-bar>
 
+<main>
+  <section>
+    <div class="container-1">
+      <app-tag [tagText]="'CASOS REGISTRADOS'">
+        <i class="icon-list"></i>
+      </app-tag>
+    </div>
+    <div class="container-2">
+      <ng-container *ngFor="let fecha of ['Fecha Inicial', 'Fecha Final']">
+        <app-calendar [tagText]="fecha" (onChange)="onDateChange()"></app-calendar>
+      </ng-container>
+    </div>
+  </section>
 
+  <section class="container-3">
+    <div>
+      <p-toast></p-toast>
+      <p-button (onClick)="showMoreRecords()" label="MOSTRAR 10 REGISTROS"></p-button>
+      <ng-container *ngFor="let btn of informationButtons">
+        <app-information-button [informationText]="btn.text" (buttonClick)="btn.onClick ? statusMessages() : null"></app-information-button>
+      </ng-container>
+    </div>
+    <div class="container-4">
+      <app-information-input [informationInput]="'Buscar Datos:'"
+
+      ></app-information-input>
+    </div>
+  </section>
+
+  <section>
+    <p-table
+      #dt
+      [value]="displayedConversations"
+      styleClass="p-datatable-gridlines"
+      [rows]="pageSize"
+      [paginator]="true"
+      [rowHover]="true"
+      dataKey="id"
+      currentPageReportTemplate="Mostrando registros del {first} al {last} de un total de {totalRecords} registros"
+      [showCurrentPageReport]="true"
+    >
+      <ng-template pTemplate="header">
+        <tr class="typography-text style-header">
+          <th>#</th>
+          <th pSortableColumn="number">
+            <div class="header-content">
+              Número de Whatsapp <p-sortIcon field="number"></p-sortIcon>
+            </div>
+          </th>
+          <th pSortableColumn="agent">
+            <div class="header-content">
+              Agente que lo Atendió <p-sortIcon field="agent"></p-sortIcon>
+            </div>
+          </th>
+          <th pSortableColumn="date">
+            <div class="header-content">
+              Fecha Atendido <p-sortIcon field="date"></p-sortIcon>
+            </div>
+          </th>
+          <th>Opciones</th>
+        </tr>
+      </ng-template>
+
+      <ng-template pTemplate="body" let-conversation>
+        <tr class="typography-text">
+          <td>{{ conversation.id }}</td>
+          <td>+591 {{ conversation.number }}</td>
+          <td><div class="data-content">{{ conversation.agent }}</div></td>
+          <td><div class="data-content">{{ conversation.date }}</div></td>
+          <td>
+            <div class="data-content">
+              <p-button (onClick)="showConversation(conversation)">
+                <i class="chat-icon"></i>
+              </p-button>
+            </div>
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+
+    <p-dialog
+      [(visible)]="conversationDialog"
+      [style]="{ width: '450px' }"
+      header="Test"
+      [modal]="true"
+      [draggable]="false">
+      <!-- ... -->
+    </p-dialog>
+  </section>
+</main>
 
 <app-footer></app-footer>

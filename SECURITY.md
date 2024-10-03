@@ -1,6 +1,6 @@
 # Security Policy
 
-| <img src="./assets/images/logo-security.jpg" alt="Logo" width="300" style="border-radius: 15px;"/> | **Instructions on how to report security vulnerabilities in the system. This helps manage and mitigate security issues responsibly.** |
+| <img src="/web-ui/src/assets/readme/logo-security.jpg" alt="Logo" width="300" style="border-radius: 15px;"/> | **Instructions on how to report security vulnerabilities in the system. This helps manage and mitigate security issues responsibly.** |
 |------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 > [!WARNING]

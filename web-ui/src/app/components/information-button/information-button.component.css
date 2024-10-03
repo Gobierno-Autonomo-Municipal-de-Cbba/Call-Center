@@ -1,0 +1,16 @@
+.typography-text {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.style-button {
+  border-radius: 10%;
+  border: none;
+  box-shadow: none;
+  border-bottom: 4px solid var(--blash);
+  margin-right: 31px;
+  background-color: var(--platinum);
+  padding: 10px;
+  width: auto;
+  height: 44px;
+}

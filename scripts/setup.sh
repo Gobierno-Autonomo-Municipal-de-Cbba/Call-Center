@@ -10,7 +10,7 @@ cd web\ ui
 npm install
 
 # Installing dependencies for the backend (Nestjs & Node.js)
-cd ../api/CallCenterAPI
+cd ../api
 npm install
 
 echo "Complete configuration."

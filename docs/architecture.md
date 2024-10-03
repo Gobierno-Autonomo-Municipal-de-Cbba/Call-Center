@@ -1,6 +1,6 @@
 # System Architecture
 
-| <img src="../assets/images/logo-architecture.jpg" alt="Logo" width="300" style="border-radius: 15px;"/> | **This document describes the architecture of the Comprehensive Web System for Claims and Reports.** |
+| <img src="/web-ui/src/assets/readme/logo-architecture.jpg" alt="Logo" width="300" style="border-radius: 15px;"/> | **This document describes the architecture of the Comprehensive Web System for Claims and Reports.** |
 |------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 ## Main Components
@@ -17,4 +17,4 @@
 > [!TIP]
 > Architecture Diagram
 
-<img src="../assets/images/diagram-architecture.png" alt="Avatar" width="500" style="border-radius: 15px;"/>
+<img src="/web-ui/src/assets/readme/diagram-architecture.png" alt="Avatar" width="500" style="border-radius: 15px;"/>

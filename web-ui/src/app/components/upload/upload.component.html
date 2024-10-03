@@ -1,0 +1,20 @@
+<p-toast />
+
+<p-fileUpload
+  #fileUploadRef
+  mode="basic"
+  chooseLabel="Subir adjunto"
+  chooseIcon=" "
+  name="demo[]"
+  url="https://www.primefaces.org/cdn/api/upload.php"
+  accept="image/*"
+  maxFileSize="1000000" />
+
+<div>
+  <button pButton
+    class="typography-subtitle style-button"
+    (click)="statusMessages(fileUploadRef)">
+    <i class="icon-check"></i>
+    subir
+  </button>
+</div>

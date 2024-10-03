@@ -1,6 +1,6 @@
 # Issue Template
 
-| <img src="../assets/images/logo-assurance.png" alt="Logo" width="300" style="border-radius: 15px;"/> | **Templates to create issues on GitHub. It can include predefined sections to describe errors, suggestions, etc.** |
+| <img src="/web-ui/src/assets/readme/logo-assurance.png" alt="Logo" width="300" style="border-radius: 15px;"/> | **Templates to create issues on GitHub. It can include predefined sections to describe errors, suggestions, etc.** |
 |------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 ## Problem Description

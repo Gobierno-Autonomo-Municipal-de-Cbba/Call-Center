@@ -1,6 +1,6 @@
 # System Design
 
-| <img src="../assets/images/logo-design.png" alt="Logo" width="300" style="border-radius: 15px;"/> | **This document details the design of the Comprehensive Web Complaints and Reports System, including the user interface and user experience.** |
+| <img src="/web-ui/src/assets/readme/logo-design.png" alt="Logo" width="300" style="border-radius: 15px;"/> | **This document details the design of the Comprehensive Web Complaints and Reports System, including the user interface and user experience.** |
 |------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 ## User Interface (UI)

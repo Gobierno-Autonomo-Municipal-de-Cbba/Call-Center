@@ -1,9 +1,9 @@
 # Technical Manual and Developer Guide
 
-| <img src="../assets/images/logo-user-guide.jpg" alt="Logo" width="300" style="border-radius: 15px;"/> | **This guide provides detailed instructions on how to use the Comprehensive Web Complaints and Reports System.** |
+| <img src="/web-ui/src/assets/readme/logo-user-guide.jpg" alt="Logo" width="300" style="border-radius: 15px;"/> | **This guide provides detailed instructions on how to use the Comprehensive Web Complaints and Reports System.** |
 |------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
-| <img src="../assets/images/logo-developer-guide.png" alt="Logo" width="300" style="border-radius: 15px;"/> | **The guide also provides information for developers who wish to contribute to the system.** |
+| <img src="/web-ui/src/assets/readme/logo-developer-guide.png" alt="Logo" width="300" style="border-radius: 15px;"/> | **The guide also provides information for developers who wish to contribute to the system.** |
 |------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 ## Main Features
