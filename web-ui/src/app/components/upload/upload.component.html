@@ -1,5 +1,10 @@
 <p-toast />
 
+<div class="typography-text">
+  {{ informationLabel }}
+</div>
+<br />
+
 <p-fileUpload
   #fileUploadRef
   mode="basic"
@@ -11,10 +16,16 @@
   maxFileSize="1000000" />
 
 <div>
-  <button pButton
-    class="typography-subtitle style-button"
+  <button
+    pButton
+    class="typography-subtitle"
     (click)="statusMessages(fileUploadRef)">
-    <i class="icon-check"></i>
-    subir
+    <ng-content>
+      <i
+        [ngClass]="iconClass"
+        class="show-icon-a">
+      </i>
+    </ng-content>
+    {{ informationLabel2 }}
   </button>
 </div>

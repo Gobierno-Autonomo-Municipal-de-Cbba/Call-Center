@@ -1,4 +1,4 @@
-export interface ProfileData {
+export interface ProfileModel {
   id?: string;
   name?: string;
   ci?: number;

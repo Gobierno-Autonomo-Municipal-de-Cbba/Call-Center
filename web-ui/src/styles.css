@@ -3,7 +3,6 @@
 @import "primeicons/primeicons.css";
 
 :root {
-  /* COLORS */
   --white: #FFFFFF;
   --seasalt: #F8F8F8;
   --platinum: #DEDEDE;
@@ -21,9 +20,6 @@
   --keppel: #4FB9A8;
   --hunyadi-yellow: #F9B154;
   --amaranth-purple: #AE1857;
-
-  /* ... */
-
 }
 
 html, body {
@@ -37,7 +33,7 @@ html, body {
   font-family: "Secular One", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 59px;
+  font-size: 60px;
   line-height: 72px;
   letter-spacing: -0.02em;
   color: var(--white);
@@ -47,7 +43,7 @@ html, body {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-style: normal;
-  font-size: 29px;
+  font-size: 30px;
   line-height: 36px;
   letter-spacing: -0.02em;
   color: var(--white);
@@ -57,7 +53,7 @@ html, body {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-style: normal;
-  font-size: 19px;
+  font-size: 20px;
   line-height: 28px;
   letter-spacing: 0em;
   color: var(--white);
@@ -67,7 +63,7 @@ html, body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 24px;
   letter-spacing: 0em;
   color: var(--black);
@@ -77,8 +73,50 @@ html, body {
   font-family: "Cormorant Garamond", serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.05em;
   color: var(--black);
+}
+
+.size-bold {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.color-bold {
+  color: var(--black);
+  font-weight: bold;
+}
+
+.text-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.text-spacing {
+  letter-spacing: 0.3em;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.container-margin {
+  margin: 10px 0px;
+}
+
+.container-center {
+  display: flex;
+  justify-content: center;
+}
+
+.show-icon-a {
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.show-icon-b {
+  background-repeat: no-repeat;
+  background-size: 1.5rem;
 }

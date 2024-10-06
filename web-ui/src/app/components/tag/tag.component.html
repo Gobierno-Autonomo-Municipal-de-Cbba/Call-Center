@@ -1,4 +1,11 @@
 <p-tag>
-  <ng-content></ng-content>
-  {{ tagText }}
+  <ng-content>
+    <i
+      [ngClass]="iconClass"
+      class="show-icon-a">
+    </i>
+  </ng-content>
+  <div class="typography-subtitle text-spacing">
+    {{ informationLabel }}
+  </div>
 </p-tag>

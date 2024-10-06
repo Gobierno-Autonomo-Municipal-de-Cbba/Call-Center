@@ -1,12 +1,14 @@
-::ng-deep p-tag .p-tag {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 19px;
-  line-height: 28px;
-  letter-spacing: 0.3em;
-  color: var(--white);
+.show-icon-a {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 35px;
+}
 
+::ng-deep p-tag .p-tag {
+  background-color: var(--keppel);
+  width: 1595px;
+  height: 68px;
+  padding: 20px 20px;
   border-radius: 0%;
   justify-content: flex-start;
   cursor: context-menu;

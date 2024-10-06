@@ -2,7 +2,7 @@
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 24px;
   letter-spacing: 0em;
   color: var(--black);
@@ -14,7 +14,7 @@
   font-family: "Poppins", sans-serif;
   font-weight: bold;
   font-style: normal;
-  font-size: 19px;
+  font-size: 20px;
   line-height: 28px;
   letter-spacing: 0em;
   color: var(--white);
@@ -41,7 +41,7 @@
   display: inline-block;
 }
 
-.style-button {
+button {
   background-color: var(--honolulu-blue);
   border-radius: 10rem;
   border: none;
@@ -52,10 +52,7 @@
   box-shadow: none;
 }
 
-.icon-check {
-  background-image: url('/assets/app/check-svgrepo-com.svg');
-  background-repeat: no-repeat;
-  background-position: center;
+.show-icon-a {
   width: 2rem;
   height: 2rem;
   margin-right: 12px;

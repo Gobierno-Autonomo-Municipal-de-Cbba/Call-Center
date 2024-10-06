@@ -1,0 +1,36 @@
+::ng-deep input {
+  width: 234px;
+  height: 45px;
+}
+
+.text-center {
+  margin-bottom: 45px;
+}
+
+::ng-deep .icon-0 {
+  background-image: url('/assets/app/terminal-access-pc-computer-screen-svgrepo-com.svg');
+}
+
+::ng-deep .icon-1 {
+  background-image: url('/assets/app/code-coding-script-svgrepo-com.svg');
+}
+
+::ng-deep .icon-3 {
+  background-image: url('/assets/app/hash-outline-svgrepo-com.svg');
+}
+
+::ng-deep .icon-4 {
+  background-image: url('/assets/app/user-svgrepo-com.svg');
+}
+
+.--0 {
+  column-gap: 86px;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.--1 {
+  column-gap: 773px;
+  align-items: center;
+  margin-bottom: 84px;
+}

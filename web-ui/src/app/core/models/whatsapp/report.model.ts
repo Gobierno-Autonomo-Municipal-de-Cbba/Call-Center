@@ -1,7 +1,7 @@
-export interface PieChartData {
+export interface PieChartModel {
   data: number[];
 }
 
-export interface BarChartData {
+export interface BarChartModel {
   data: number[];
 }

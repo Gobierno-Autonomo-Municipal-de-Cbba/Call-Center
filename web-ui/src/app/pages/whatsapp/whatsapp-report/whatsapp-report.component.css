@@ -1,0 +1,46 @@
+::ng-deep app-tag p-tag .p-tag {
+  background-color: var(--hunyadi-yellow);
+  width: 346px;
+  padding: 20px 25px;
+  margin-bottom: 20px;
+}
+
+::ng-deep .container-center div:nth-child(2) app-tag p-tag .p-tag {
+  width: 1136px;
+}
+
+::ng-deep .icon-1 .p-datepicker-trigger {
+  background-image: url('/assets/app/calendar-svgrepo-com.svg');
+}
+
+::ng-deep .icon-2 {
+  background-image: url('/assets/app/filter-svgrepo-com.svg');
+}
+
+::ng-deep .p-toast-message {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0em;
+  color: var(--black);
+  margin-top: 40px;
+  text-align: left;
+}
+
+.--0 {
+  column-gap: 69px;
+  align-items: center;
+  margin-bottom: 70px;
+}
+
+.--1 {
+  column-gap: 134px;
+}
+
+.bar-chart {
+  display: block;
+  width: 85%;
+  height: 85%;
+}

@@ -1,29 +1,29 @@
 import { Injectable } from '@angular/core';
-import { PieChartData, BarChartData } from '@core/models/whatsapp/report.model';
+import { PieChartModel, BarChartModel } from '@core/models/whatsapp/report.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ReportService {
-  private pieChartData(): PieChartData {
+  private pieChartData(): PieChartModel {
     return {
       // API
       data: [21000, 650, 1500, 700, 5000]
     };
-  }
+  } 
 
-  private barChartData(): BarChartData {
+  private barChartData(): BarChartModel {
     return {
       // API
       data: [2145, 686, 653, 2906, 13866, 406, 1852]
     };
   }
 
-  public getPieChartData(): PieChartData {
+  public getPieChartData(): PieChartModel {
     return this.pieChartData();
   }
 
-  public getBarChartData(): BarChartData {
+  public getBarChartData(): BarChartModel {
     return this.barChartData();
   }
 }

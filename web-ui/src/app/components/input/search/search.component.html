@@ -1,0 +1,10 @@
+<label class="typography-text text-end container-margin">{{ informationLabel }}</label>
+<p-iconField>
+  <input
+    pInputText
+    [(ngModel)]="informationInput"
+    (input)="onInputChange($event)"
+    [ngClass]="iconClass"
+    class="typography-text show-icon-b"
+  />
+</p-iconField>

@@ -1,0 +1,11 @@
+input {
+  background-color: var(--seasalt);
+  border: 0.5px solid var(--semi-black2);
+  box-shadow: none;
+  padding: 0px 10px;
+  height: 45px;
+  width: 523px;
+  cursor: text;
+  padding-right: 40px;
+  background-position: right 10px center;
+}

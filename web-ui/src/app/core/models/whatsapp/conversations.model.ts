@@ -1,4 +1,4 @@
-export interface Conversation {
+export interface ConversationModel {
   id?: number;
   number?: number;
   agent?: string;

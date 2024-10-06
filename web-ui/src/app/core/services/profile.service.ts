@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import { ProfileData } from '@core/models/profile.model';
+import { ProfileModel } from '@core/models/profile.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ProfileService {
-  private profileData: ProfileData[] = [
+  private profileData: ProfileModel[] = [
     // API
     {
       id: '1000',
@@ -19,11 +19,11 @@ export class ProfileService {
     }
   ];
 
-  public getProfileData(): ProfileData[] {
+  public getProfileData(): ProfileModel[] {
     return this.profileData;
   }
 
-  public getProfile(): Promise<ProfileData[]> {
+  public getProfile(): Promise<ProfileModel[]> {
     return Promise.resolve(this.getProfileData());
   }
 };

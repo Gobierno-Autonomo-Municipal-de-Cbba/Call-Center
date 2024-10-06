@@ -1,0 +1,16 @@
+::ng-deep .icon-0 {
+  background-image: url('/assets/app/table-list-solid.svg');
+}
+
+::ng-deep .icon-1 {
+  background-image: url('/assets/app/check-svgrepo-com.svg');
+}
+
+.--0 {
+  margin-bottom: 96px;
+}
+
+.--1 {
+  margin-bottom: 18px;
+  cursor: context-menu;
+}

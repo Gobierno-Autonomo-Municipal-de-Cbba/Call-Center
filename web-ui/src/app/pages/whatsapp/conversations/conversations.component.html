@@ -1,0 +1,102 @@
+<app-nav-bar></app-nav-bar>
+
+<main>
+  <section>
+    <div class="text-center">
+      <app-tag
+        [informationLabel]="'CASOS REGISTRADOS'"
+        [iconClass]="'icon-0'">
+      </app-tag>
+    </div>
+    <div class="container-center --0">
+      <app-calendar
+        [informationLabel]="'Fecha Inicial'"
+        [iconClass]="'icon-1'"
+        [(date)]="startDate"
+        (dateChange)="onDateChange()">
+      </app-calendar>
+      <app-calendar
+        [informationLabel]="'Fecha Final'"
+        [iconClass]="'icon-1'"
+        [(date)]="endDate"
+        (dateChange)="onDateChange()">
+      </app-calendar>
+    </div>
+  </section>
+
+  <section class="container-center --1">
+    <div>
+      <p-toast />
+      <ng-container *ngFor="let btn of informationButtons">
+        <app-information-button
+          [informationLabel]="btn.text"
+          (buttonClick)="handleButtonClick(btn.text)">
+        </app-information-button>
+      </ng-container>
+    </div>
+    <div>
+      <app-search-input
+        [informationLabel]="'Buscar Datos:'"
+        [(informationInput)]="searchTerm"
+        (informationInputChange)="onSearchChange($event)"
+        [iconClass]="'icon-2'">
+      </app-search-input>
+    </div>
+  </section>
+
+  <section>
+    <p-table
+      #dt
+      [value]="filteredConversations"
+      styleClass="p-datatable-gridlines"
+      [rows]="rowsToShow"
+      [paginator]="true"
+      [rowHover]="true"
+      dataKey="id"
+      currentPageReportTemplate="Mostrando registros del {first} al {last} de un total de {totalRecords} registros"
+      [showCurrentPageReport]="true"
+    >
+    <ng-template pTemplate="header">
+      <tr class="typography-text size-bold">
+        <th *ngFor="let column of headerColumns" [pSortableColumn]="column.sortableField" [ngClass]="{'sortable': column.sortableField, 'context-menu': !column.sortableField}">
+          <ng-container *ngIf="column.sortableField; else nonSortable">
+            <div class="container-center">
+              {{ column.label }} <p-sortIcon [field]="column.sortableField"></p-sortIcon>
+            </div>
+          </ng-container>
+          <ng-template #nonSortable>
+            {{ column.label }}
+          </ng-template>
+        </th>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="body" let-conversation>
+      <tr class="typography-text">
+        <td *ngFor="let field of bodyFields">
+          <div *ngIf="field.key === 'number'; else normalText">{{ field.prefix }}{{ conversation[field.key] }}</div>
+          <ng-template #normalText>{{ field.prefix }}{{ conversation[field.key] }}</ng-template>
+        </td>
+        <td>
+          <div class="container-center">
+            <p-button (onClick)="showConversation(conversation)">
+              <i class="show-icon-a"></i>
+            </p-button>
+          </div>
+        </td>
+      </tr>
+    </ng-template>
+    </p-table>
+
+    <p-dialog
+      [(visible)]="conversationDialog"
+      [style]="{ width: '450px' }"
+      header="Test"
+      [modal]="true"
+      [draggable]="false">
+      <!-- ... -->
+    </p-dialog>
+  </section>
+</main>
+
+<app-footer></app-footer>

@@ -8,6 +8,7 @@
   border: 0.5px solid var(--semi-black2);
   box-shadow: none;
   pointer-events: none;
+  padding: 0px 10px;
 }
 
 ::ng-deep p-calendar .p-calendar {
@@ -16,8 +17,11 @@
   width: 234.50px;
 }
 
+::ng-deep .p-calendar .p-icon-wrapper {
+  display: none;
+}
+
 ::ng-deep .p-calendar-w-btn .p-datepicker-trigger {
-  background-image: url('/assets/app/calendar-svgrepo-com.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 1.5rem;
@@ -25,13 +29,4 @@
   background-color: var(--keppel);
   border: 0.5px solid var(--semi-black2);
   box-shadow: none;
-}
-
-::ng-deep .p-icon-wrapper {
-  display: none;
-}
-
-.typography-text {
-  color: var(--black);
-  font-weight: bold;
 }

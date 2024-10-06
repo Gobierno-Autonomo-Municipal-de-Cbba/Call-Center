@@ -1,10 +1,10 @@
-<div>
-  <label class="typography-text">{{ tagText }}</label>
-  <br />
-  <p-calendar
-    [(ngModel)]="date"
-    [showIcon]="true"
-    variant="filled"
-    [readonlyInput]="true" />
-</div>
-
+<label class="typography-text color-bold">{{ informationLabel }}</label>
+<br />
+<p-calendar
+  [(ngModel)]="date"
+  (ngModelChange)="onDateChange($event)"
+  [showIcon]="true"
+  variant="filled"
+  [readonlyInput]="true"
+  [ngClass]="iconClass">
+</p-calendar>
