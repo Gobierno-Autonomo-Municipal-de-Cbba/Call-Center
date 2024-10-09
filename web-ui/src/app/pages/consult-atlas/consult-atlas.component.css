@@ -23,6 +23,10 @@
   background-image: url('/assets/app/user-svgrepo-com.svg');
 }
 
+::ng-deep .icon-5 {
+  background-image: url('/assets/app/search-svgrepo-com.svg');
+}
+
 .--0 {
   column-gap: 86px;
   align-items: center;

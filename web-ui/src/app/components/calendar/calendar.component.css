@@ -17,7 +17,7 @@
   width: 234.50px;
 }
 
-::ng-deep .p-calendar .p-icon-wrapper {
+::ng-deep p-calendar .p-datepicker-trigger svg {
   display: none;
 }
 

@@ -94,8 +94,8 @@
   cursor: context-menu;
 }
 
-.text-center {
-  margin-bottom: 60px;
+::ng-deep .p-paginator-bottom {
+  border: none;
 }
 
 ::ng-deep .icon-0 {
@@ -110,6 +110,10 @@
   background-image: url('/assets/app/search-alt-2-svgrepo-com.svg');
 }
 
+.text-center {
+  margin-bottom: 60px;
+}
+
 .--0 {
   column-gap: 69px;
   align-items: center;
@@ -121,16 +125,6 @@
   align-items: flex-start;
   margin-bottom: 31px;
 }
-
-/*
-TEST -> taba sin datos
-
-class="typography-title"
-.color-bold {
-  color: var(--black);
-  font-weight: bold;
-}
-*/
 
 th.context-menu {
   cursor: context-menu;
