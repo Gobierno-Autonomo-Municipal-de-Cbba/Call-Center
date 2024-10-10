@@ -15,7 +15,6 @@ import { CalendarComponent } from '@components/calendar/calendar.component';
 import { InformationButtonComponent } from '@components/button/information/information.component';
 import { SearchInputComponent } from '@components/input/search/search.component';
 
-import { ConversationModel } from '@core/models/whatsapp/conversations.model';
 import { ConversationsService } from '@core/services/whatsapp/conversations.service';
 
 @Component({
@@ -27,9 +26,14 @@ import { ConversationsService } from '@core/services/whatsapp/conversations.serv
   providers: [MessageService]
 })
 export default class ConversationsComponent implements OnInit {
+  constructor(
+    private conversationsService: ConversationsService,
+    private messageService: MessageService
+  ) {}
+
   conversationDialog = false;
   conversations: any[] = [];
-  conversation!: ConversationModel;
+  conversation!: any;
   filteredConversations: any[] = [];
   startDate: Date | undefined;
   endDate: Date | undefined;
@@ -44,7 +48,6 @@ export default class ConversationsComponent implements OnInit {
     { text: 'EXPORTAR PDF', onClick: true },
     { text: 'COPIAR', onClick: true }
   ];
-
   headerColumns = [
     { label: '#', sortableField: '' },
     { label: 'Número de Whatsapp', sortableField: 'number' },
@@ -52,18 +55,12 @@ export default class ConversationsComponent implements OnInit {
     { label: 'Fecha Atendido', sortableField: 'date' },
     { label: 'Opciones', sortableField: '' }
   ];
-
   bodyFields = [
     { key: 'id', prefix: '' },
     { key: 'number', prefix: '+591 ' },
     { key: 'agent', prefix: '' },
     { key: 'date', prefix: '' }
   ];
-
-  constructor(
-    private conversationsService: ConversationsService,
-    private messageService: MessageService
-  ) {}
 
   ngOnInit(): void {
     this.conversationsService.getConversations().then(data => {
@@ -72,7 +69,26 @@ export default class ConversationsComponent implements OnInit {
     });
   }
 
-  onDateChange(): void {
+  buttonOptions(buttonText: string): void {
+    switch (buttonText) {
+      case 'MOSTRAR 10 REGISTROS':
+        this.loadRecords();
+        break;
+      case 'EXPORTAR EXCEL':
+        this.exportExcel();
+        break;
+      case 'EXPORTAR PDF':
+        this.exportPdf();
+        break;
+      case 'COPIAR':
+        this.showMessage();
+        break;
+      default:
+        console.log(`Acción no definida para el botón: ${buttonText}`);
+    }
+  }
+
+  selectDate(): void {
     if (this.endDate) {
       this.endDate.setHours(23, 59, 59, 999);
     }
@@ -86,26 +102,7 @@ export default class ConversationsComponent implements OnInit {
     });
   }
 
-  handleButtonClick(buttonText: string): void {
-    switch (buttonText) {
-      case 'MOSTRAR 10 REGISTROS':
-        this.loadMoreRecords();
-        break;
-      case 'EXPORTAR EXCEL':
-        this.exportToExcel();
-        break;
-      case 'EXPORTAR PDF':
-        this.exportToPdf();
-        break;
-      case 'COPIAR':
-        this.statusMessages();
-        break;
-      default:
-        console.warn(`Acción no definida para el botón: ${buttonText}`);
-    }
-  }
-
-  loadMoreRecords(): void {
+  loadRecords(): void {
     if (this.firstClick) {
       this.rowsToShow = 10;
       this.firstClick = false;
@@ -116,15 +113,15 @@ export default class ConversationsComponent implements OnInit {
     this.rowsToShow = Math.min(this.rowsToShow, this.filteredConversations.length);
   }
 
-  exportToExcel() {
+  exportExcel() {
     console.log('Exportando a Excel...');
   }
 
-  exportToPdf() {
+  exportPdf() {
     console.log('Exportando a PDF...');
   }
 
-  statusMessages() {
+  showMessage() {
     this.messageService.add({
       severity: 'success',
       summary: '¡Éxito!',
@@ -133,11 +130,8 @@ export default class ConversationsComponent implements OnInit {
     });
   }
 
-  onSearchChange(searchTerm: string): void {
+  searchRecords(searchTerm: string): void {
     this.searchTerm = searchTerm;
-    this.filterConversations();
-  }
-  filterConversations(): void {
     const searchTermLower = this.searchTerm.toLowerCase().trim();
 
     if (!searchTermLower) {
@@ -152,7 +146,7 @@ export default class ConversationsComponent implements OnInit {
     }
   }
 
-  showConversation(conversation: ConversationModel) {
+  openOption(conversation: any) {
     this.conversation = { ...conversation };
     this.conversationDialog = true;
   }

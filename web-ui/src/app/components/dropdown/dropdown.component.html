@@ -1,0 +1,21 @@
+<label class="typography-text">{{ informationLabel }}</label>
+<p-inputGroup>
+  <button
+    *ngIf="dropdownType !== 'quantities'"
+    pButton
+    [ngClass]="iconClass"
+    class="show-icon-b">
+  </button>
+  <p-dropdown
+    [options]="dropdownOptions"
+    [(ngModel)]="selectedOption"
+    [optionLabel]="optionLabel"
+    [placeholder]="placeholderLabel"
+    [style.width]="dropdownWidth"
+    [ngClass]="{'quantities-dropdown': dropdownType === 'quantities'}"
+    (onChange)="onHandle($event)">
+    <ng-template pTemplate="dropdownicon">
+      <i class="pi pi-sort-down-fill"></i>
+    </ng-template>
+  </p-dropdown>
+</p-inputGroup>

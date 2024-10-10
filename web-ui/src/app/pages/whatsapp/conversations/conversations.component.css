@@ -13,17 +13,13 @@
   column-gap: 50px;
 }
 
-::ng-deep .container-center {
-  align-items: center;
-  flex-wrap: wrap;
-}
-
 ::ng-deep .p-datatable {
   width: 1475px;
   margin: 0 auto;
 }
 
-::ng-deep tr {
+::ng-deep tr,
+th.context-menu {
   cursor: context-menu;
 }
 
@@ -102,12 +98,12 @@
   background-image: url('/assets/app/table-list-solid.svg');
 }
 
-::ng-deep .icon-1 .p-datepicker-trigger {
-  background-image: url('/assets/app/calendar-svgrepo-com.svg');
+::ng-deep .p-button:hover .show-icon-a {
+  filter: invert(60%) sepia(76%) saturate(6930%) hue-rotate(176deg) brightness(98%) contrast(102%);
 }
 
-::ng-deep .icon-2 {
-  background-image: url('/assets/app/search-alt-2-svgrepo-com.svg');
+::ng-deep .p-dialog .p-dialog-header .p-dialog-header-icon {
+  box-shadow: none;
 }
 
 .text-center {
@@ -126,16 +122,8 @@
   margin-bottom: 31px;
 }
 
-th.context-menu {
-  cursor: context-menu;
-}
-
 .show-icon-a {
   background-image: url('/assets/app/conversation-alt-svgrepo-com.svg');
-  width: 2rem;
-  height: 2rem;
-}
-
-::ng-deep .p-button:hover .show-icon-a {
-  filter: invert(60%) sepia(76%) saturate(6930%) hue-rotate(176deg) brightness(98%) contrast(102%);
+  width: 1.8rem;
+  height: 1.8rem;
 }

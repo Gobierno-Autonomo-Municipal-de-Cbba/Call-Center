@@ -1,22 +1,20 @@
 <app-nav-bar [marginBottom]="'30px'"></app-nav-bar>
 
 <main>
+  <p-toast />
   <section class="container-center --0">
-    <p-toast />
     <app-calendar
       #startDate
-      [informationLabel]="'Fecha Inicial'"
-      [iconClass]="'icon-1'">
+      [informationLabel]="'Fecha Inicial'">
     </app-calendar>
     <app-calendar
       #endDate
-      [informationLabel]="'Fecha Final'"
-      [iconClass]="'icon-1'">
+      [informationLabel]="'Fecha Final'">
     </app-calendar>
     <app-action-button
-      [iconClass]="'icon-2'"
+      [iconClass]="'icon-1'"
       [informationLabel]="'Filtrar'"
-      (onFilter)="onFilterDates()">
+      (buttonClick)="configureMessages()">
     </app-action-button>
   </section>
 

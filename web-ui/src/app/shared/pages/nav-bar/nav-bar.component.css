@@ -33,12 +33,13 @@
   display: flex;
   flex-wrap: wrap;
   align-content: space-between;
-  padding: 0px 30px;
+  padding: 0px 40px;
+  position: relative;
 }
 
 .grid-item {
   height: auto;
-  padding-right: 30px;
+  padding-right: 40px;
 }
 
 .grid-item b {

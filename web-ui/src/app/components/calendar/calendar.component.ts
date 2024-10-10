@@ -16,7 +16,7 @@ export class CalendarComponent {
   @Input() date: Date | undefined;
   @Output() dateChange = new EventEmitter<Date>();
 
-  onDateChange(event: Date) {
+  onDate(event: Date) {
     this.dateChange.emit(event);
   }
 }

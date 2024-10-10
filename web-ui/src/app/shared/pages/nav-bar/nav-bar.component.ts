@@ -8,7 +8,7 @@ import { ButtonModule } from 'primeng/button';
   standalone: true,
   imports: [CommonModule, ButtonModule, RouterModule],
   templateUrl: './nav-bar.component.html',
-  styleUrls: ['./nav-bar.component.css']
+  styleUrl: './nav-bar.component.css'
 })
 export class NavBarComponent {
   constructor(private router: Router) {}
@@ -53,7 +53,7 @@ export class NavBarComponent {
     if (route) {
       this.router.navigate([route]);
     } else {
-      console.warn('The provided route is undefined or null');
+      console.log('The provided route is undefined or null');
     }
   }
 

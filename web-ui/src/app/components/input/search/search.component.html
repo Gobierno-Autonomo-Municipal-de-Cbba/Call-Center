@@ -3,8 +3,8 @@
   <input
     pInputText
     [(ngModel)]="informationInput"
-    (input)="onInputChange($event)"
-    [ngClass]="iconClass"
+    (input)="onChange($event)"
+    [style.width]="inputWidth"
     class="typography-text show-icon-b"
   />
 </p-iconField>

@@ -9,11 +9,7 @@
   width: 1136px;
 }
 
-::ng-deep .icon-1 .p-datepicker-trigger {
-  background-image: url('/assets/app/calendar-svgrepo-com.svg');
-}
-
-::ng-deep .icon-2 {
+::ng-deep .icon-1 {
   background-image: url('/assets/app/filter-svgrepo-com.svg');
 }
 

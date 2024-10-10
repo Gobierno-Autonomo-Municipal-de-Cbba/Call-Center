@@ -2,9 +2,8 @@
 <br />
 <p-calendar
   [(ngModel)]="date"
-  (ngModelChange)="onDateChange($event)"
+  (ngModelChange)="onDate($event)"
   [showIcon]="true"
   variant="filled"
-  [readonlyInput]="true"
-  [ngClass]="iconClass">
+  [readonlyInput]="true">
 </p-calendar>

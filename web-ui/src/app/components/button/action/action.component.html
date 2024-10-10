@@ -1,7 +1,10 @@
 <button
   pButton
   class="typography-title"
-  (click)="handleState()">
-  <span class="show-icon-a" [ngClass]="iconClass"></span>
+  (click)="onClick()">
+  <span
+    class="show-icon-a"
+    [ngClass]="iconClass">
+  </span>
   {{ informationLabel }}
 </button>

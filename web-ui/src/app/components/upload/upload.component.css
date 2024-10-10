@@ -53,6 +53,7 @@ button {
 }
 
 .show-icon-a {
+  background-image: url('/assets/app/check-svgrepo-com.svg');
   width: 2rem;
   height: 2rem;
   margin-right: 12px;

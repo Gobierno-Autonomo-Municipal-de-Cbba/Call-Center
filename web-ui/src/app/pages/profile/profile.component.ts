@@ -6,7 +6,6 @@ import { NavBarComponent } from '@shared/pages/nav-bar/nav-bar.component';
 import { FooterComponent } from '@shared/pages/footer/footer.component';
 import { TagComponent } from '@components/tag/tag.component';
 
-import { ProfileModel } from '@core/models/profile.model';
 import { ProfileService } from '@core/services/profile.service';
 
 @Component({
@@ -14,10 +13,13 @@ import { ProfileService } from '@core/services/profile.service';
   standalone: true,
   imports: [NavBarComponent, FooterComponent, TagComponent, TableModule, CommonModule],
   templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.css'],
+  styleUrl: './profile.component.css',
 })
 export default class ProfileComponent implements OnInit {
-  profileData: ProfileModel[] = [];
+  constructor(private profileService: ProfileService) {}
+
+  profileData: any[] = [];
+
   profileField = [
     { label: 'Nombre Completo', key: 'name' },
     { label: 'Documento de Identidad', key: 'ci' },
@@ -28,13 +30,7 @@ export default class ProfileComponent implements OnInit {
     { label: 'Rol', key: 'role' }
   ];
 
-  constructor(private profileService: ProfileService) {}
-
   ngOnInit() {
-    this.fetchProfile();
-  }
-
-  private fetchProfile() {
     this.profileService.getProfile().then(data => {
       this.profileData = data;
     });

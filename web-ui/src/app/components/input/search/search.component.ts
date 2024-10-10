@@ -15,10 +15,11 @@ import { FormsModule } from '@angular/forms';
 export class SearchInputComponent {
   @Input() informationLabel: string = '';
   @Input() informationInput: string = '';
+  @Input() inputWidth: string = '';
   @Input() iconClass: string = '';
   @Output() informationInputChange: EventEmitter<string> = new EventEmitter<string>();
 
-  onInputChange(event: any): void {
+  onChange(event: any): void {
     this.informationInputChange.emit(event.target.value);
   }
 }

@@ -6,7 +6,10 @@
     class="show-icon-b">
   </button>
   <input
-    type="text"
     pInputText
+    [style.width]="inputWidth"
+    class="typography-text"
+    [(ngModel)]="inputValue"
+    (input)="onChange($event)"
   />
 </p-inputGroup>

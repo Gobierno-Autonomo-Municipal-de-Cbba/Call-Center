@@ -4,8 +4,11 @@ input {
   box-shadow: none;
   padding: 0px 10px;
   height: 45px;
-  width: 523px;
   cursor: text;
   padding-right: 40px;
   background-position: right 10px center;
+}
+
+.show-icon-b {
+  background-image: url('/assets/app/search-alt-2-svgrepo-com.svg');
 }

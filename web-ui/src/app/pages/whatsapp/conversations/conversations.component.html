@@ -1,6 +1,7 @@
 <app-nav-bar></app-nav-bar>
 
 <main>
+  <p-toast />
   <section>
     <div class="text-center">
       <app-tag
@@ -11,35 +12,32 @@
     <div class="container-center --0">
       <app-calendar
         [informationLabel]="'Fecha Inicial'"
-        [iconClass]="'icon-1'"
         [(date)]="startDate"
-        (dateChange)="onDateChange()">
+        (dateChange)="selectDate()">
       </app-calendar>
       <app-calendar
         [informationLabel]="'Fecha Final'"
-        [iconClass]="'icon-1'"
         [(date)]="endDate"
-        (dateChange)="onDateChange()">
+        (dateChange)="selectDate()">
       </app-calendar>
     </div>
   </section>
 
   <section class="container-center --1">
     <div>
-      <p-toast />
       <ng-container *ngFor="let btn of informationButtons">
         <app-information-button
           [informationLabel]="btn.text"
-          (buttonClick)="handleButtonClick(btn.text)">
+          (buttonClick)="buttonOptions(btn.text)">
         </app-information-button>
       </ng-container>
     </div>
     <div>
       <app-search-input
         [informationLabel]="'Buscar Datos:'"
+        [inputWidth]="'523px'"
         [(informationInput)]="searchTerm"
-        (informationInputChange)="onSearchChange($event)"
-        [iconClass]="'icon-2'">
+        (informationInputChange)="searchRecords($event)">
       </app-search-input>
     </div>
   </section>
@@ -54,8 +52,8 @@
       [rowHover]="true"
       dataKey="id"
       currentPageReportTemplate="Mostrando registros del {first} al {last} de un total de {totalRecords} registros"
-      [showCurrentPageReport]="true"
-    >
+      [showCurrentPageReport]="true">
+
     <ng-template pTemplate="header">
       <tr class="typography-text size-bold">
         <th *ngFor="let column of headerColumns" [pSortableColumn]="column.sortableField" [ngClass]="{'sortable': column.sortableField, 'context-menu': !column.sortableField}">
@@ -73,13 +71,15 @@
 
     <ng-template pTemplate="body" let-conversation>
       <tr class="typography-text">
-        <td *ngFor="let field of bodyFields">
-          <div *ngIf="field.key === 'number'; else normalText">{{ field.prefix }}{{ conversation[field.key] }}</div>
-          <ng-template #normalText>{{ field.prefix }}{{ conversation[field.key] }}</ng-template>
+        <td *ngFor="let field of bodyFields" [ngClass]="{ 'text-center': field.key === 'id' }">
+          <div  *ngIf="field.key === 'number'; else rowData">{{ field.prefix }}{{ conversation[field.key] }}</div>
+          <ng-template #rowData>
+            {{ conversation[field.key] }}
+          </ng-template>
         </td>
         <td>
           <div class="container-center">
-            <p-button (onClick)="showConversation(conversation)">
+            <p-button (onClick)="openOption(conversation)">
               <i class="show-icon-a"></i>
             </p-button>
           </div>
@@ -95,13 +95,12 @@
             No se encontró nada
         </td>
       </tr>
-  </ng-template>
-
-    </p-table>
+    </ng-template>
+  </p-table>
 
     <p-dialog
       [(visible)]="conversationDialog"
-      [style]="{ width: '450px' }"
+      [style]="{ width: '900px' }"
       header="Test"
       [modal]="true"
       [draggable]="false">

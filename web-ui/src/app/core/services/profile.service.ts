@@ -5,8 +5,8 @@ import { ProfileModel } from '@core/models/profile.model';
   providedIn: 'root',
 })
 export class ProfileService {
+  // API
   private profileData: ProfileModel[] = [
-    // API
     {
       id: '1000',
       name: 'TEST TEST',
@@ -19,11 +19,7 @@ export class ProfileService {
     }
   ];
 
-  public getProfileData(): ProfileModel[] {
-    return this.profileData;
-  }
-
-  public getProfile(): Promise<ProfileModel[]> {
-    return Promise.resolve(this.getProfileData());
+  getProfile(): Promise<ProfileModel[]> {
+    return Promise.resolve(this.profileData);
   }
 };

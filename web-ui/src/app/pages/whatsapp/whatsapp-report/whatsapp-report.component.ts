@@ -11,7 +11,6 @@ import { CalendarComponent } from '@components/calendar/calendar.component';
 import { ActionButtonComponent } from '@components/button/action/action.component';
 import { TagComponent } from '@components/tag/tag.component';
 
-import { PieChartModel, BarChartModel } from '@core/models/whatsapp/report.model';
 import { ReportService } from '@core/services/whatsapp/report.service';
 
 @Component({
@@ -19,43 +18,27 @@ import { ReportService } from '@core/services/whatsapp/report.service';
   standalone: true,
   imports: [NavBarComponent, FooterComponent, CalendarComponent, ActionButtonComponent, TagComponent, ChartModule, ToastModule],
   templateUrl: './whatsapp-report.component.html',
-  styleUrls: ['./whatsapp-report.component.css'],
+  styleUrl: './whatsapp-report.component.css',
   providers: [MessageService]
 })
 export default class WhatsappReportComponent implements OnInit {
-  @ViewChild('startDate') startDate!: CalendarComponent;
-  @ViewChild('endDate') endDate!: CalendarComponent;
-
-  pieData: any;
-  pieOptions: any;
-  barData: any;
-  barOptions: any;
-
   constructor(
     private messageService: MessageService,
     private reportService: ReportService
   ) {}
 
+  @ViewChild('startDate') startDate!: CalendarComponent;
+  @ViewChild('endDate') endDate!: CalendarComponent;
+  pieData: any;
+  pieOptions: any;
+  barData: any;
+  barOptions: any;
+
   ngOnInit() {
     Chart.register(ChartDataLabels);
-    this.initializeCharts();
-  }
 
-  onFilterDates() {
-    const start = this.startDate?.date;
-    const end = this.endDate?.date;
-
-    if (!start || !end) {
-      this.showToast('error', '¡Error!', 'Debe seleccionar ambas fechas.');
-    } else {
-      this.showToast('success', '¡Éxito!', 'Fechas filtradas correctamente.');
-    }
-  }
-
-  private initializeCharts() {
-    const pieChartData: PieChartModel = this.reportService.getPieChartData();
-    const barChartData: BarChartModel = this.reportService.getBarChartData();
-
+    const pieChartData = this.reportService.getPiechart();
+    const barChartData = this.reportService.getBarchart();
     const pieChartLabels = ['CONSULTA', 'DENUNCIA', 'FELICITACIÓN', 'RECLAMO', 'SOLICITUD'];
     const barChartLabels = [
       'DIRECCIÓN DE GESTIÓN DE MOVILIDAD URBANA',
@@ -67,13 +50,39 @@ export default class WhatsappReportComponent implements OnInit {
       'SECRETARIA DE SALUD'
     ];
 
-    this.pieData = this.createPieData(pieChartLabels, pieChartData);
-    this.pieOptions = this.createPieOptions();
-    this.barData = this.createBarData(barChartLabels, barChartData);
-    this.barOptions = this.createBarOptions();
+    this.pieData = this.piechartCreate(pieChartLabels, pieChartData);
+    this.pieOptions = this.piechartConfiguration();
+    this.barData = this.barchartCreate(barChartLabels, barChartData);
+    this.barOptions = this.barchartConfiguration();
   }
 
-  private createPieData(labels: string[], pieChartData: PieChartModel) {
+  configureMessages() {
+    const start = this.startDate?.date;
+    const end = this.endDate?.date;
+
+    if (!start || !end) {
+      this.showMessage('error', '¡Error!', 'Debe seleccionar ambas fechas.');
+    } else {
+      this.showMessage('success', '¡Éxito!', 'Fechas filtradas correctamente.');
+    }
+  }
+
+  showMessage(severity: string, summary: string, detail: string) {
+    this.messageService.add({
+      severity,
+      summary,
+      detail,
+      life: 5000,
+    });
+  }
+
+  /*
+  filterDates() {
+    ...
+  }
+  */
+
+  piechartCreate(labels: string[], pieChartData: any) {
     return {
       labels: labels.map(
         (label, index) => `${label}: ${pieChartData.data[index]}`
@@ -87,7 +96,7 @@ export default class WhatsappReportComponent implements OnInit {
     };
   }
 
-  private createBarData(labels: string[], barChartData: BarChartModel) {
+  barchartCreate(labels: string[], barChartData: any) {
     const commonColors = ['#4AC1E0', '#EA547C', '#3ADB76', '#1779BA', '#F18721', '#AE1857', '#4FB9A8'];
 
     return {
@@ -103,7 +112,7 @@ export default class WhatsappReportComponent implements OnInit {
     };
   }
 
-  private createPieOptions() {
+  piechartConfiguration() {
     return {
       plugins: {
         tooltip: {
@@ -124,7 +133,7 @@ export default class WhatsappReportComponent implements OnInit {
     };
   }
 
-  private createBarOptions() {
+  barchartConfiguration() {
     return {
       plugins: {
         tooltip: { enabled: false },
@@ -157,14 +166,5 @@ export default class WhatsappReportComponent implements OnInit {
         },
       },
     };
-  }
-
-  private showToast(severity: string, summary: string, detail: string) {
-    this.messageService.add({
-      severity,
-      summary,
-      detail,
-      life: 5000,
-    });
   }
 }
