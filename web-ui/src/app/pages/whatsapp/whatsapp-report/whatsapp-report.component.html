@@ -1,0 +1,51 @@
+<app-nav-bar [marginBottom]="'30px'"></app-nav-bar>
+
+<main>
+  <p-toast></p-toast>
+
+  <section class="container-center --0">
+    <app-calendar
+      #startDate
+      [informationLabel]="'Fecha Inicial'">
+    </app-calendar>
+    <app-calendar
+      #endDate
+      [informationLabel]="'Fecha Final'">
+    </app-calendar>
+    <app-action-button
+      [iconClass]="'icon-1'"
+      [informationLabel]="'Filtrar'"
+      (buttonClick)="configureMessages()">
+    </app-action-button>
+  </section>
+
+  <section>
+    <div class="container-center --1">
+      <div>
+        <app-tag
+          [informationLabel]="'POR TIPO DE CASOS'"
+          class="typeCases">
+          </app-tag>
+        <p-chart
+          type="pie"
+          [data]="pieData"
+          [options]="pieOptions"
+        />
+      </div>
+      <div>
+        <app-tag
+          [informationLabel]="'POR UNIDAD'"
+          class="typeUnit">
+        </app-tag>
+        <p-chart
+          type="bar"
+          class="graphicSize"
+          [data]="barData"
+          [options]="barOptions"
+        />
+      </div>
+    </div>
+  </section>
+</main>
+
+<app-footer></app-footer>

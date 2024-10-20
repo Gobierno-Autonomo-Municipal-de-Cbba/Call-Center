@@ -1,5 +1,127 @@
 <app-nav-bar></app-nav-bar>
 
+<main>
+  <p-toast />
+  <section>
+    <div class="text-center">
+      <app-tag
+        [informationLabel]="'CONSULTAR AL SISTEMA ATLAS'"
+        [iconClass]="'icon-0'">
+      </app-tag>
+    </div>
 
+    <div class="container-center --0">
+      <ng-container *ngFor="let input of inputConfigs">
+        <ng-container [ngSwitch]="input.type">
+          <app-information-input
+            *ngSwitchCase="'input'"
+            [informationLabel]="input.label"
+            [iconClass]="input.icon"
+            [inputWidth]="input.width ?? '100%'"
+            (inputvalueChange)="input.onChange?.($event)">
+          </app-information-input>
+          <app-dropdown
+            *ngSwitchCase="'dropdown'"
+            [informationLabel]="input.label"
+            [iconClass]="input.icon"
+            [dropdownWidth]="input.width ?? '100%'"
+            [dropdownType]="input.dropdownType ?? 'quantities'">
+          </app-dropdown>
+          <app-action-button
+            *ngSwitchCase="'button'"
+            [iconClass]="input.icon"
+            [informationLabel]="input.label"
+            (buttonClick)="filterRecords()">
+          </app-action-button>
+        </ng-container>
+      </ng-container>
+    </div>
+
+    <div class="container-center --1">
+      <app-dropdown
+        [informationLabel]="'Mostrar'"
+        [placeholderLabel]="'15'"
+        [dropdownWidth]="'193px'"
+        [dropdownType]="'quantities'"
+        (changeOption)="showRecords($event)">
+      </app-dropdown>
+      <app-search-input
+        [informationLabel]="'Buscar'"
+        [inputWidth]="'485px'"
+        [(informationInput)]="searchTerm"
+        (informationInputChange)="searchRecords($event)">
+      </app-search-input>
+    </div>
+  </section>
+
+  <section>
+    <p-table
+      #dt
+      [value]="filteredConsultatlasss"
+      styleClass="p-datatable-gridlines"
+      [rows]="rows"
+      [paginator]="true"
+      [rowHover]="true"
+      dataKey="id"
+      currentPageReportTemplate="Mostrando registros del {first} al {last} de un total de {totalRecords} registros"
+      [showCurrentPageReport]="true">
+
+    <ng-template pTemplate="header">
+      <tr class="typography-text size-bold">
+        <th
+          *ngFor="let column of headerColumns"
+          [pSortableColumn]="column.sortableField"
+          [ngClass]="{'sortable': column.sortableField, 'context-menu': !column.sortableField}">
+          <ng-container *ngIf="column.sortableField; else nonSortable">
+            <div class="container-center">
+              {{ column.label }}
+              <p-sortIcon [field]="column.sortableField"></p-sortIcon>
+            </div>
+          </ng-container>
+          <ng-template #nonSortable>
+            {{ column.label }}
+          </ng-template>
+        </th>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="body" let-consultAtlas>
+      <tr class="typography-text">
+        <td
+          *ngFor="let field of bodyFields"
+          [ngClass]="{ 'text-center': field.key === 'general' }">
+          <div>{{ consultAtlas[field.key] }}</div>
+        </td>
+        <td>
+          <div class="container-center">
+            <p-button (onClick)="openOption(consultAtlas)">
+              <i class="show-icon-a"></i>
+            </p-button>
+          </div>
+        </td>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="emptymessage">
+      <tr>
+        <td
+          colspan="6"
+          class="typography-subtitle color-bold text-center">
+            No se encontró nada
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+
+  <p-dialog
+    [(visible)]="consultatlasDialog"
+    [style]="{ width: '900px' }"
+    header="Test"
+    [modal]="true"
+    [draggable]="false">
+    <!-- ... -->
+  </p-dialog>
+  </section>
+</main>
 
 <app-footer></app-footer>

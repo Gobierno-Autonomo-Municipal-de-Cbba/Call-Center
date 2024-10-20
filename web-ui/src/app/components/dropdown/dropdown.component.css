@@ -1,0 +1,76 @@
+::ng-deep .p-dropdown {
+  height: 45px;
+  background-color: var(--seasalt);
+  border: 0.5px solid var(--semi-black2);
+  box-shadow: none;
+  border-radius: 0% 10% 10% 0%;
+}
+
+::ng-deep .p-dropdown {
+  width: 100%;
+}
+
+::ng-deep .p-dropdown-item {
+  font-family: "Poor Richard", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.05em;
+  color: var(--black);
+}
+
+::ng-deep .p-overlay {
+  top: 43px !important;
+}
+
+::ng-deep .p-dropdown .p-dropdown-panel {
+  background-color: transparent;
+  box-shadow: none;
+  cursor: context-menu;
+}
+
+::ng-deep .quantities-dropdown .p-dropdown-items {
+  border: 0.5px solid var(--semi-black2);
+  padding: 10px 5px;
+  border-radius: 0% 0% 5% 5%;
+  width: 50%;
+  background-color: var(--white);
+}
+
+::ng-deep .p-dropdown-items {
+  border: 0.5px solid var(--semi-black2);
+  padding: 10px 5px;
+  border-radius: 0% 0% 5% 5%;
+}
+
+::ng-deep .p-dropdown-items .p-dropdown-item:not(.p-highlight):not(.p-disabled).p-focus,
+::ng-deep .p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight {
+  background: var(--cool-gray);
+  border-bottom: 0.5px solid var(--cool-gray);
+  border-radius: 10% 10% 0% 0%;
+}
+
+::ng-deep .p-dropdown-item {
+  border-bottom: 0.5px solid var(--semi-black2);
+  border-radius: 10%;
+  padding: 2.5px 5px;
+}
+
+button {
+  background-color: var(--keppel);
+  border: 0.5px solid var(--semi-black2);
+  box-shadow: none;
+  width: 66px;
+  height: 45px;
+  cursor: context-menu;
+}
+
+.show-icon-b {
+  background-position: center;
+}
+
+i {
+  color: var(--black);
+  transform: scale(0.8, 1.2);
+}

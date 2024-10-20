@@ -1,0 +1,20 @@
+<app-nav-bar></app-nav-bar>
+
+<main>
+  <section class="text-center">
+    <app-tag [informationLabel]="'MIS DATOS'"></app-tag>
+  </section>
+
+  <section class="container-center">
+    <p-table [value]="profileData" [tableStyle]="{'width': '827.43px', 'height': '308px'}">
+      <ng-template pTemplate="body" let-profile>
+        <tr *ngFor="let field of profileField; let i = index" [ngClass]="{'row-pair': i % 2 === 0, 'row-odd': i % 2 !== 0}">
+          <td class="typography-text text-center">{{ field.label }}</td>
+          <td class="typography-text" [ngClass]="{'size-bold': field.key === 'name'}">{{ profile[field.key] }}</td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </section>
+</main>
+
+<app-footer></app-footer>
