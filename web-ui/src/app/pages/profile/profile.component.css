@@ -1,0 +1,32 @@
+::ng-deep app-tag p-tag .p-tag {
+  background-color: var(--hunyadi-yellow);
+  width: 950px;
+  padding: 20px 100px;
+}
+
+.text-center {
+  margin-bottom: 74px;
+}
+
+.container-center {
+  width: auto;
+  cursor: context-menu;
+}
+
+.container-center td {
+  border: 0.5px solid var(--platinum);
+  padding: 10px 15px;
+}
+
+.container-center p-table {
+  border-radius: 1%;
+  overflow: hidden;
+}
+
+.row-pair {
+  background-color: var(--seasalt);
+}
+
+.row-odd {
+  background-color: var(--cool-gray);
+}

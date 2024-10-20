@@ -1,0 +1,12 @@
+::ng-deep .icon-0 {
+  background-image: url('/assets/app/table-list-solid.svg');
+}
+
+.--0 {
+  margin-bottom: 96px;
+}
+
+.--1 {
+  margin-bottom: 18px;
+  cursor: context-menu;
+}

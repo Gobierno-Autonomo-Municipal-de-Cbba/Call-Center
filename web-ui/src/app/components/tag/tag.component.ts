@@ -10,5 +10,6 @@ import { TagModule } from 'primeng/tag';
   styleUrl: './tag.component.css'
 })
 export class TagComponent {
-  @Input() tagText: string = '';
+  @Input() informationLabel: string = '';
+  @Input() iconClass?: string;
 }

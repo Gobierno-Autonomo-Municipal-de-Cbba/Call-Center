@@ -1,0 +1,15 @@
+<label class="typography-text">{{ informationLabel }}</label>
+<p-inputGroup>
+  <button
+    pButton
+    [ngClass]="iconClass"
+    class="show-icon-b">
+  </button>
+  <input
+    pInputText
+    [style.width]="inputWidth"
+    class="typography-text"
+    [(ngModel)]="inputValue"
+    (input)="onChange($event)"
+  />
+</p-inputGroup>

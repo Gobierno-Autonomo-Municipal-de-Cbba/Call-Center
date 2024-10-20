@@ -1,0 +1,28 @@
+button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+  height: 137px;
+  background-color: var(--keppel);
+  border: none;
+  border-bottom: 4px solid var(--blash);
+  box-shadow: none;
+  border-radius: 10%;
+  justify-content: center;
+}
+
+button:hover {
+  background-color: var(--blash);
+  color: var(--honolulu-blue);
+}
+
+.show-icon-a {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-bottom: 6px;
+}
+
+button:hover .show-icon-a {
+  filter: invert(60%) sepia(76%) saturate(6930%) hue-rotate(176deg) brightness(98%) contrast(102%);
+}
