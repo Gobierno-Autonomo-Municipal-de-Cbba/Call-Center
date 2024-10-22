@@ -1,3 +1,3 @@
-export interface ListQuestionModel {
+export interface ListquestionModel {
 
 }

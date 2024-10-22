@@ -1,11 +1,14 @@
 ::ng-deep app-tag p-tag .p-tag {
   background-color: var(--hunyadi-yellow);
-  width: 346px;
   padding: 20px 25px;
   margin-bottom: 20px;
 }
 
-::ng-deep .container-center div:nth-child(2) app-tag p-tag .p-tag {
+::ng-deep .typeCases p-tag .p-tag {
+  width: 413px;
+}
+
+::ng-deep .typeUnit p-tag .p-tag {
   width: 1136px;
 }
 
@@ -26,7 +29,7 @@
 }
 
 .--0 {
-  column-gap: 69px;
+  column-gap: 79px;
   align-items: center;
   margin-bottom: 70px;
 }
@@ -35,8 +38,8 @@
   column-gap: 134px;
 }
 
-.bar-chart {
+.graphicSize {
   display: block;
-  width: 85%;
-  height: 85%;
+  width: 95%;
+  height: 95%;
 }

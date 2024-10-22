@@ -22,37 +22,46 @@ import { ReportService } from '@core/services/whatsapp/report.service';
   providers: [MessageService]
 })
 export default class WhatsappReportComponent implements OnInit {
-  constructor(
-    private messageService: MessageService,
-    private reportService: ReportService
-  ) {}
-
   @ViewChild('startDate') startDate!: CalendarComponent;
   @ViewChild('endDate') endDate!: CalendarComponent;
+
   pieData: any;
   pieOptions: any;
   barData: any;
   barOptions: any;
 
+  pieChartLabels = ['CONSULTA', 'DENUNCIA', 'FELICITACIÓN', 'RECLAMO'];
+  barChartLabels = [
+    'DIRECCIÓN DE GESTIÓN DE MOVILIDAD URBANA',
+    'DIRECCIÓN DE INTENDENCIA',
+    'DIRECCIÓN DE MEDIO AMBIENTE',
+    'DIRECCIÓN DE RECAUDACIONES',
+    'OTRA',
+    'PLATAFORMA ATENCIÓN AL CONTRIBUYENTE',
+    'SECRETARIA DE SALUD'
+  ];
+  commonColors = {
+    pie: ['#006400', '#FF69B4', '#4AC1E0', '#800080'],
+    bar: ['#4AC1E0', '#FF69B4', '#3ADB76', '#800080', '#F18721', '#8B0000', '#006400']
+  };
+
+  constructor(
+    private messageService: MessageService,
+    private reportService: ReportService
+  ) {}
+
   ngOnInit() {
     Chart.register(ChartDataLabels);
+    this.loadGraphics();
+  }
 
+  loadGraphics(){
     const pieChartData = this.reportService.getPiechart();
     const barChartData = this.reportService.getBarchart();
-    const pieChartLabels = ['CONSULTA', 'DENUNCIA', 'FELICITACIÓN', 'RECLAMO', 'SOLICITUD'];
-    const barChartLabels = [
-      'DIRECCIÓN DE GESTIÓN DE MOVILIDAD URBANA',
-      'DIRECCIÓN DE INTENDENCIA',
-      'DIRECCIÓN DE MEDIO AMBIENTE',
-      'DIRECCIÓN DE RECAUDACIONES',
-      'OTRA',
-      'PLATAFORMA ATENCIÓN AL CONTRIBUYENTE',
-      'SECRETARIA DE SALUD'
-    ];
 
-    this.pieData = this.piechartCreate(pieChartLabels, pieChartData);
+    this.pieData = this.piechartCreate(this.pieChartLabels, pieChartData);
     this.pieOptions = this.piechartConfiguration();
-    this.barData = this.barchartCreate(barChartLabels, barChartData);
+    this.barData = this.barchartCreate(this.barChartLabels, barChartData);
     this.barOptions = this.barchartConfiguration();
   }
 
@@ -84,28 +93,24 @@ export default class WhatsappReportComponent implements OnInit {
 
   piechartCreate(labels: string[], pieChartData: any) {
     return {
-      labels: labels.map(
-        (label, index) => `${label}: ${pieChartData.data[index]}`
-      ),
+      labels: labels.map((label, index) => `${label}: ${pieChartData.data[index]}`),
       datasets: [
         {
           data: pieChartData.data,
-          backgroundColor: ['#4FB9A8', '#EA547C', '#4AC1E0', '#8A2BE2', '#F9B154'],
+          backgroundColor: this.commonColors.pie,
         },
       ],
     };
   }
 
   barchartCreate(labels: string[], barChartData: any) {
-    const commonColors = ['#4AC1E0', '#EA547C', '#3ADB76', '#1779BA', '#F18721', '#AE1857', '#4FB9A8'];
-
     return {
       labels: labels,
       datasets: [
         {
           data: barChartData.data,
-          backgroundColor: commonColors.map(color => `${color}90`),
-          borderColor: commonColors,
+          backgroundColor: this.commonColors.bar.map(color => `${color}90`),
+          borderColor: this.commonColors.bar,
           borderWidth: 2,
         },
       ],
@@ -122,7 +127,7 @@ export default class WhatsappReportComponent implements OnInit {
           labels: {
             font: {
               family: 'Poppins, sans-serif',
-              size: 15,
+              size: 20,
               weight: 'bold',
             },
             color: '#000',
@@ -143,7 +148,7 @@ export default class WhatsappReportComponent implements OnInit {
           align: 'left',
           formatter: (value: number) => value,
           font: {
-            size: 30,
+            size:30,
             weight: 'bold',
           },
           offset: -5,

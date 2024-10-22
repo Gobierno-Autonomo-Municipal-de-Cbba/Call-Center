@@ -1,3 +1,3 @@
-export interface SeeCasesModel {
+export interface SeecasesModel {
 
 }

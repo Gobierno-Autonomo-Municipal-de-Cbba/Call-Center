@@ -1,3 +1,3 @@
-export interface RegisterDenunciationModel {
+export interface RegisterdenunciationModel {
 
 }

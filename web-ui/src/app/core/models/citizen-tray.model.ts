@@ -1,3 +1,3 @@
-export interface CitizenTrayModel {
+export interface CitizentrayModel {
 
 }

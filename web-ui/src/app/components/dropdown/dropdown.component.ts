@@ -17,11 +17,12 @@ export class DropdownComponent implements OnInit {
   @Input() dropdownWidth: string = '';
   @Input() iconClass: string = '';
   @Input() dropdownType: 'years' | 'quantities' = 'years';
+  @Input() options: any[] = [];
+  @Output() changeOption : EventEmitter<any> = new EventEmitter<any>();
+
   dropdownOptions: any[] = [];
   selectedOption: any;
   optionLabel: string = '';
-  @Input() options: any[] = [];
-  @Output() changeOption : EventEmitter<any> = new EventEmitter<any>();
 
   ngOnInit() {
     if (this.dropdownType === 'years') {

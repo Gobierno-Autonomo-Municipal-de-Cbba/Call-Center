@@ -1,3 +1,3 @@
-export interface RegisterCaseModel {
+export interface RegistercaseModel {
 
 }

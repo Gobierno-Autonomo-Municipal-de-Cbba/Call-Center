@@ -1,3 +1,3 @@
-export interface RegisterQuestionModel {
+export interface RegisterquestionModel {
 
 }

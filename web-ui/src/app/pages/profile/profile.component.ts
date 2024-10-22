@@ -16,8 +16,6 @@ import { ProfileService } from '@core/services/profile.service';
   styleUrl: './profile.component.css',
 })
 export default class ProfileComponent implements OnInit {
-  constructor(private profileService: ProfileService) {}
-
   profileData: any[] = [];
 
   profileField = [
@@ -29,6 +27,8 @@ export default class ProfileComponent implements OnInit {
     { label: 'Correo Municipal', key: 'email' },
     { label: 'Rol', key: 'role' }
   ];
+
+  constructor(private profileService: ProfileService) {}
 
   ngOnInit() {
     this.profileService.getProfile().then(data => {

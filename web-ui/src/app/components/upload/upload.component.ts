@@ -13,11 +13,11 @@ import { ToastModule } from 'primeng/toast';
   providers: [MessageService]
 })
 export class UploadComponent {
-  constructor(private messageService: MessageService) {}
-
   @Input() informationLabel: string = '';
   @Input() informationLabel2: string = '';
   @Input() iconClass?: string;
+
+  constructor(private messageService: MessageService) {}
 
   configureMessages(fileUpload: any) {
     if (fileUpload.files.length === 0) {

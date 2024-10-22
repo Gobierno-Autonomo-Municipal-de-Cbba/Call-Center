@@ -28,11 +28,6 @@ import { ConsultatlasssService } from '@core/services/consult-atlas.service';
   providers: [MessageService]
 })
 export default class ConsultAtlasComponent implements OnInit {
-  constructor(
-    private consultatlasssService: ConsultatlasssService,
-    private messageService: MessageService
-  ) {}
-
   consultatlasDialog = false;
   consultatlasss: any[] = [];
   consultatlas!: any;
@@ -65,6 +60,11 @@ export default class ConsultAtlasComponent implements OnInit {
     { label: 'Solicitante', icon: 'icon-4', width: '234px', type: 'input', onChange: this.applicantStart.bind(this) },
     { label: 'Buscar', icon: 'icon-5', type: 'button' }
   ];
+
+  constructor(
+    private consultatlasssService: ConsultatlasssService,
+    private messageService: MessageService
+  ) {}
 
   ngOnInit() {
     this.consultatlasssService.getConsultatlasss().then(data => {

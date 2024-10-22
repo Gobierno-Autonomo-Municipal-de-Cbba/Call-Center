@@ -26,11 +26,6 @@ import { ConversationsService } from '@core/services/whatsapp/conversations.serv
   providers: [MessageService]
 })
 export default class ConversationsComponent implements OnInit {
-  constructor(
-    private conversationsService: ConversationsService,
-    private messageService: MessageService
-  ) {}
-
   conversationDialog = false;
   conversations: any[] = [];
   conversation!: any;
@@ -42,12 +37,6 @@ export default class ConversationsComponent implements OnInit {
   firstClick = true;
   searchTerm: string = '';
 
-  informationButtons = [
-    { text: 'MOSTRAR 10 REGISTROS', onClick: true },
-    { text: 'EXPORTAR EXCEL', onClick: true },
-    { text: 'EXPORTAR PDF', onClick: true },
-    { text: 'COPIAR', onClick: true }
-  ];
   headerColumns = [
     { label: '#', sortableField: '' },
     { label: 'Número de Whatsapp', sortableField: 'number' },
@@ -62,30 +51,16 @@ export default class ConversationsComponent implements OnInit {
     { key: 'date', prefix: '' }
   ];
 
+  constructor(
+    private conversationsService: ConversationsService,
+    private messageService: MessageService
+  ) {}
+
   ngOnInit(): void {
     this.conversationsService.getConversations().then(data => {
       this.conversations = data;
       this.filteredConversations = [...data];
     });
-  }
-
-  buttonOptions(buttonText: string): void {
-    switch (buttonText) {
-      case 'MOSTRAR 10 REGISTROS':
-        this.loadRecords();
-        break;
-      case 'EXPORTAR EXCEL':
-        this.exportExcel();
-        break;
-      case 'EXPORTAR PDF':
-        this.exportPdf();
-        break;
-      case 'COPIAR':
-        this.showMessage();
-        break;
-      default:
-        console.log(`Acción no definida para el botón: ${buttonText}`);
-    }
   }
 
   selectDate(): void {

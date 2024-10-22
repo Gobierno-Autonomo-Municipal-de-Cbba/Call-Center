@@ -7,12 +7,12 @@ import { ChartModel } from '@core/models/whatsapp/report.model';
 export class ReportService {
   // API
   private piechartData: ChartModel = {
-    data: [21000, 650, 1500, 700, 5000]
+    data: [1500, 650, 21881, 5000]
   }
 
   // API
   private barchartData: ChartModel = {
-    data: [2145, 686, 653, 2906, 13866, 1852]
+    data: [2145, 686, 653, 2906, 13866, 406, 1852]
   }
 
   getPiechart(): ChartModel {

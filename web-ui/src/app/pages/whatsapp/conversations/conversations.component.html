@@ -1,7 +1,8 @@
 <app-nav-bar></app-nav-bar>
 
 <main>
-  <p-toast />
+  <p-toast></p-toast>
+
   <section>
     <div class="text-center">
       <app-tag
@@ -25,12 +26,22 @@
 
   <section class="container-center --1">
     <div>
-      <ng-container *ngFor="let btn of informationButtons">
-        <app-information-button
-          [informationLabel]="btn.text"
-          (buttonClick)="buttonOptions(btn.text)">
-        </app-information-button>
-      </ng-container>
+      <app-information-button
+        [informationLabel]="'MOSTRAR 10 REGISTROS'"
+        (buttonClick)="loadRecords()">
+      </app-information-button>
+      <app-information-button
+        [informationLabel]="'EXPORTAR EXCEL'"
+        (buttonClick)="exportExcel()">
+      </app-information-button>
+      <app-information-button
+        [informationLabel]="'EXPORTAR PDF'"
+        (buttonClick)="exportPdf()">
+      </app-information-button>
+      <app-information-button
+        [informationLabel]="'COPIAR'"
+        (buttonClick)="showMessage()">
+      </app-information-button>
     </div>
     <div>
       <app-search-input

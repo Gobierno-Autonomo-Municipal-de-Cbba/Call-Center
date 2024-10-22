@@ -11,10 +11,9 @@ import { ButtonModule } from 'primeng/button';
   styleUrl: './nav-bar.component.css'
 })
 export class NavBarComponent {
-  constructor(private router: Router) {}
+  @Input() marginBottom: string = '60px';
 
   activeSubmenu: string | null = null;
-  @Input() marginBottom: string = '60px';
 
   menus = [
     { id: 'cases', label: 'Casos', icon: 'icon-cases', submenu: true, items: [
@@ -44,6 +43,8 @@ export class NavBarComponent {
       { label: 'Cerrar Sesión', icon: 'icon-log-out', route: '/iniciar-sesion' }
     ]}
   ];
+
+  constructor(private router: Router) {}
 
   toggleSubmenu(submenu: string) {
     this.activeSubmenu = this.activeSubmenu === submenu ? null : submenu;
